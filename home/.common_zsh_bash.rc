@@ -22,6 +22,6 @@ test -s ~/.alias && . ~/.alias || true
 # disable the xon/xoff protocol (C-S [suspend] / C-Q [continue])
 stty stop undef
 
-
+# Framework for managing dotfiles easily.
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
