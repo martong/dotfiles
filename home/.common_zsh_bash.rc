@@ -1,0 +1,27 @@
+export PATH=/proj/cudbdm/tools/internal/bin:$HOME/local/bin:$HOME/bin:/usr/atria/bin:$PATH
+export LD_LIBRARY_PATH=/app/python/2.7.5/LMWP3/lib/:/app/gcc/4.8.1/LMWP3/lib64:$LD_LIBRARY_PATH
+# tmux 1.8 for sles11
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/proj/cudbdm/tools/external/libevent/lib/
+export PATH=/proj/cudbdm/tools/external/tmux-1.8/SLES11/bin:$PATH
+# tup
+export PATH=/proj/cudbdm/tools/external/tup:$PATH
+
+umask 002
+
+export SHELL=/bin/bash
+export EDITOR=vim
+export WINEDITOR=gvim
+
+if hostname --fqdn | grep esekilxxen18 >/dev/null
+then
+	source ~/bin/loadmodules
+fi
+
+test -s ~/.alias && . ~/.alias || true
+
+# disable the xon/xoff protocol (C-S [suspend] / C-Q [continue])
+stty stop undef
+
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
