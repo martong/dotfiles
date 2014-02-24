@@ -5,6 +5,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/proj/cudbdm/tools/external/libevent/lib
 export PATH=/proj/cudbdm/tools/external/tmux-1.8/SLES11/bin:$PATH
 # tup
 export PATH=/proj/cudbdm/tools/external/tup:$PATH
+# clang
+export LD_LIBRARY_PATH=/proj/cudbdm/tools/external/clang-3.4/SLED11/lib:$LD_LIBRARY_PATH
 
 umask 002
 
