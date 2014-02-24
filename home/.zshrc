@@ -54,7 +54,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 autoload -U compinit
 compinit
@@ -64,7 +64,7 @@ compinit
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git)
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
-plugins=(git screen per-directory-history zsh-syntax-highlighting history-substring-search)
+plugins=(git screen zsh-syntax-highlighting history-substring-search)
 PER_DIRECTORY_HISTORY_DEFAULT_GLOBAL_HISTORY=true
 
 source $ZSH/oh-my-zsh.sh
