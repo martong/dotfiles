@@ -60,6 +60,8 @@ Bundle 'sjbach/lusty'
 Bundle 'moll/vim-bbye'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-surround'
 " IDE stuff in a separate file
 "if $VIMIDE == "ide"
 	"source ~/.vimrc.ide
@@ -203,6 +205,8 @@ vnoremap <leader>d "_d
 nnoremap <C-S> i
 inoremap <C-S> <ESC>l
 vnoremap <C-S> <ESC>l
+map <Leader>3 :vertical resize 30<cr>
+map <Leader>8 :vertical resize 85<cr>
 
 
 " TMUX compatiblity for
@@ -219,5 +223,4 @@ if &term =~ '^screen'
   execute "set <xRight>=\e[1;*C"
   execute "set <xLeft>=\e[1;*D"
 endif
-
 
