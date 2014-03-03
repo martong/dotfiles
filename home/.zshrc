@@ -96,6 +96,17 @@ zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' completer _tmux_pane_wo
 zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' ignore-line current
 zstyle ':completion:tmux-pane-words-anywhere:*' matcher-list 'b:=* m:{A-Za-z}={a-zA-Z}'
 
+
+# 'ctrl-x r' will complete the N last modified (mtime) files/directories
+zle -C newest-files complete-word _generic
+bindkey '^Xr' newest-files
+zstyle ':completion:newest-files:*' completer _files
+zstyle ':completion:newest-files:*' file-patterns '*~.*(omN[1,3])'
+zstyle ':completion:newest-files:*' menu select yes
+zstyle ':completion:newest-files:*' sort false
+zstyle ':completion:newest-files:*' matcher-list 'b:=*' # important
+
+
 source ~/.common_zsh_bash.rc
 
 
