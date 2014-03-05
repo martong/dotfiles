@@ -2,7 +2,7 @@ export PATH=/proj/cudbdm/tools/internal/bin:$HOME/local/bin:$HOME/bin:/usr/atria
 export LD_LIBRARY_PATH=/app/python/2.7.5/LMWP3/lib/:/app/gcc/4.8.1/LMWP3/lib64:$LD_LIBRARY_PATH
 # tmux 1.8 for sles11
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/proj/cudbdm/tools/external/libevent/lib/
-export PATH=/proj/cudbdm/tools/external/tmux-1.8/SLES11/bin:$PATH
+export PATH=/proj/cudbdm/tools/external/tmux-1.9a/SLES11/bin:$PATH
 # tup
 export PATH=/proj/cudbdm/tools/external/tup:$PATH
 # clang
