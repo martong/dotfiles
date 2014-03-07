@@ -49,6 +49,7 @@ alias cv='cleartool pwv'
 #
 alias gvimide='VIMIDE=ide gvim --nofork'
 alias vimide='VIMIDE=ide vim'
+alias vim_pure='vim -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
 
 #
 # GIT
