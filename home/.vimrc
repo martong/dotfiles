@@ -203,9 +203,7 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 " chang editor mode
-nnoremap <C-S> i
-inoremap <C-S> <ESC>l
-vnoremap <C-S> <ESC>l
+imap <M-Space> <Esc>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 85<cr>
 
