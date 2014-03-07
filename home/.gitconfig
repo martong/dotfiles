@@ -1,0 +1,17 @@
+[http]
+	proxy = www-proxy.ericsson.se:8080
+[github]
+	user = martong
+[user]
+	email = gabor.marton@ericsson.com
+[diff]
+#	tool = kdiff3
+	tool = vimdiff
+[difftool]
+#	prompt = false
+[merge]
+	tool = vimdiff
+
+[difftool "vimdiff"]
+	#path = /app/vim/7.3.401/LMWP3/bin/vimdiff
+	#cmd = vimdiff -u ~/.vimrc_empty --cmd \"set runtimepath=~/.vim_empty\" $LOCAL $REMOTE 
