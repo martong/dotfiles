@@ -204,6 +204,7 @@ nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 " chang editor mode
 imap <M-Space> <Esc>
+map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 85<cr>
 
