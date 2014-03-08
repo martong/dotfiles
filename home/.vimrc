@@ -202,8 +202,9 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 " delete without yanking
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-" chang editor mode
-imap <M-Space> <Esc>
+" change editor mode
+inoremap <M-Space> <Esc>
+inoremap jj <Esc>
 map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 85<cr>

@@ -114,6 +114,7 @@ bindkey -M viins '^n' newest-files
 bindkey -M viins '^t' tmux-pane-words-prefix
 bindkey -M vicmd '^r' redo
 bindkey -M vicmd 'u' undo
+bindkey -M viins 'jj' vi-cmd-mode
 # Enabling vim text-objects (ciw and alike) for vi-mode
 source ~/.opp.zsh/opp.zsh
 
