@@ -64,7 +64,7 @@ compinit
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git)
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
-plugins=(git screen zsh-syntax-highlighting history-substring-search)
+plugins=(vi-mode git screen zsh-syntax-highlighting history-substring-search)
 PER_DIRECTORY_HISTORY_DEFAULT_GLOBAL_HISTORY=true
 
 source $ZSH/oh-my-zsh.sh
@@ -75,7 +75,6 @@ function module() {
 }
 # Make solarized colors applied for directories as well (ls).
 eval `dircolors ~/dircolors-solarized/dircolors.ansi-universal`
-
 
 #  Completion from tmux pane
 _tmux_pane_words() {
@@ -106,6 +105,15 @@ zstyle ':completion:newest-files:*' menu select yes
 zstyle ':completion:newest-files:*' sort false
 zstyle ':completion:newest-files:*' matcher-list 'b:=*' # important
 
+
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+bindkey -M viins '^n' newest-files
+bindkey -M viins '^t' tmux-pane-words-prefix
+bindkey -M vicmd '^r' redo
+bindkey -M vicmd 'u' undo
 
 source ~/.common_zsh_bash.rc
 
