@@ -106,6 +106,22 @@ zstyle ':completion:newest-files:*' sort false
 zstyle ':completion:newest-files:*' matcher-list 'b:=*' # important
 
 
+function only-local-history-up () {
+        zle set-local-history 1
+        zle up-history
+        zle set-local-history 0
+}
+function only-local-history-down () {
+        zle set-local-history 1
+        zle down-history
+        zle set-local-history 0
+}
+zle -N only-local-history-up
+zle -N only-local-history-down
+
+
+bindkey -M vicmd 'K' only-local-history-up
+bindkey -M vicmd 'J' only-local-history-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
