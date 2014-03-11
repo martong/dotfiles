@@ -128,7 +128,9 @@ zle -N commit-to-history
 
 # Bindings
 bindkey "^X^H" commit-to-history
+bindkey "^Xh" push-line
 bindkey -M viins "^X^H" commit-to-history
+bindkey -M viins "^Xh" push-line
 
 bindkey '^Xt' tmux-pane-words-prefix
 bindkey '^X^X' tmux-pane-words-anywhere
