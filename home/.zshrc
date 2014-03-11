@@ -117,7 +117,19 @@ zle -N only-local-history-up
 zle -N only-local-history-down
 
 
+# Custom widget to store a command line in history
+# without executing it
+commit-to-history() {
+  print -s ${(z)BUFFER}
+  zle send-break
+}
+zle -N commit-to-history
+
+
 # Bindings
+bindkey "^X^H" commit-to-history
+bindkey -M viins "^X^H" commit-to-history
+
 bindkey '^Xt' tmux-pane-words-prefix
 bindkey '^X^X' tmux-pane-words-anywhere
 bindkey -M viins '^Xt' tmux-pane-words-prefix
