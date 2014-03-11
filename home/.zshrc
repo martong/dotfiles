@@ -89,8 +89,6 @@ _tmux_pane_words() {
 }
 zle -C tmux-pane-words-prefix   complete-word _generic
 zle -C tmux-pane-words-anywhere complete-word _generic
-bindkey '^Xt' tmux-pane-words-prefix
-bindkey '^X^X' tmux-pane-words-anywhere
 zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' completer _tmux_pane_words
 zstyle ':completion:tmux-pane-words-(prefix|anywhere):*' ignore-line current
 zstyle ':completion:tmux-pane-words-anywhere:*' matcher-list 'b:=* m:{A-Za-z}={a-zA-Z}'
@@ -98,7 +96,6 @@ zstyle ':completion:tmux-pane-words-anywhere:*' matcher-list 'b:=* m:{A-Za-z}={a
 
 # 'ctrl-x r' will complete the N last modified (mtime) files/directories
 zle -C newest-files complete-word _generic
-bindkey '^Xr' newest-files
 zstyle ':completion:newest-files:*' completer _files
 zstyle ':completion:newest-files:*' file-patterns '*~.*(omN[1,3])'
 zstyle ':completion:newest-files:*' menu select yes
@@ -120,17 +117,28 @@ zle -N only-local-history-up
 zle -N only-local-history-down
 
 
+# Bindings
+bindkey '^Xt' tmux-pane-words-prefix
+bindkey '^X^X' tmux-pane-words-anywhere
+bindkey -M viins '^Xt' tmux-pane-words-prefix
+bindkey -M viins '^X^X' tmux-pane-words-anywhere
+
+bindkey '^Xr' newest-files
+bindkey -M viins '^Xr' newest-files
+
 bindkey -M vicmd 'K' only-local-history-up
 bindkey -M vicmd 'J' only-local-history-down
+
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-bindkey -M viins '^n' newest-files
-bindkey -M viins '^t' tmux-pane-words-prefix
+
 bindkey -M vicmd '^r' redo
 bindkey -M vicmd 'u' undo
 bindkey -M viins 'jj' vi-cmd-mode
+
+
 # Enabling vim text-objects (ciw and alike) for vi-mode
 source ~/.opp.zsh/opp.zsh
 
