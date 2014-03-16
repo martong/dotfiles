@@ -158,4 +158,28 @@ source ~/.opp.zsh/opp.zsh
 
 source ~/.common_zsh_bash.rc
 
+# Bind generic keys properly for VI-MODE.
+# create a zkbd compatible hash;
+# to add other keys to this hash, see: man 5 terminfo
+typeset -A key
+key[Home]=${terminfo[khome]}
+key[End]=${terminfo[kend]}
+key[Insert]=${terminfo[kich1]}
+key[Delete]=${terminfo[kdch1]}
+key[PageUp]=${terminfo[kpp]}
+key[PageDown]=${terminfo[knp]}
+# setup key accordingly
+[[ -n "${key[Home]}"     ]]  && bindkey -M vicmd  "${key[Home]}"     beginning-of-line
+[[ -n "${key[End]}"      ]]  && bindkey -M vicmd  "${key[End]}"      end-of-line
+[[ -n "${key[Insert]}"   ]]  && bindkey -M vicmd  "${key[Insert]}"   vi-insert
+[[ -n "${key[Delete]}"   ]]  && bindkey -M vicmd  "${key[Delete]}"   delete-char
+[[ -n "${key[PageUp]}"   ]]  && bindkey -M vicmd  "${key[PageUp]}"   only-local-history-up
+[[ -n "${key[PageDown]}" ]]  && bindkey -M vicmd  "${key[PageDown]}" only-local-history-down
+
+[[ -n "${key[Home]}"     ]]  && bindkey -M viins  "${key[Home]}"     beginning-of-line
+[[ -n "${key[End]}"      ]]  && bindkey -M viins  "${key[End]}"      end-of-line
+[[ -n "${key[Insert]}"   ]]  && bindkey -M viins  "${key[Insert]}"   vi-insert
+[[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   delete-char
+[[ -n "${key[PageUp]}"   ]]  && bindkey -M viins  "${key[PageUp]}"   only-local-history-up
+[[ -n "${key[PageDown]}" ]]  && bindkey -M viins  "${key[PageDown]}" only-local-history-down
 
