@@ -168,18 +168,25 @@ key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
-# setup key accordingly
+# vi cmd mode
 [[ -n "${key[Home]}"     ]]  && bindkey -M vicmd  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M vicmd  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M vicmd  "${key[Insert]}"   vi-insert
 [[ -n "${key[Delete]}"   ]]  && bindkey -M vicmd  "${key[Delete]}"   delete-char
 [[ -n "${key[PageUp]}"   ]]  && bindkey -M vicmd  "${key[PageUp]}"   only-local-history-up
 [[ -n "${key[PageDown]}" ]]  && bindkey -M vicmd  "${key[PageDown]}" only-local-history-down
-
+# vi insert mode
 [[ -n "${key[Home]}"     ]]  && bindkey -M viins  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M viins  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M viins  "${key[Insert]}"   vi-insert
-[[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   delete-char
+[[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   backward-delete-char
 [[ -n "${key[PageUp]}"   ]]  && bindkey -M viins  "${key[PageUp]}"   only-local-history-up
 [[ -n "${key[PageDown]}" ]]  && bindkey -M viins  "${key[PageDown]}" only-local-history-down
+
+# After entering insert mode because of hitting a or A,
+# I can't backspace past the point where I entered insert mode.
+# So simulate vim instead of vi in case of insert mode
+bindkey -M viins "^W" backward-kill-word
+bindkey -M viins "^?" backward-delete-char      # Control-h also deletes the previous char
+bindkey -M viins "^U" backward-kill-line
 
