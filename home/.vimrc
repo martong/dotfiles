@@ -81,7 +81,7 @@ autocmd BufEnter * checktime
 autocmd CursorHold * checktime
 autocmd CursorHoldI * checktime
 " Automatically fix whitspace errors in case of C++ files.
-autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
+"autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
 
 
 " Mini BufExplorer
