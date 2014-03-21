@@ -208,6 +208,7 @@ inoremap jj <Esc>
 map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 85<cr>
+map <Leader>w :set wrap!<cr>
 
 
 " TMUX compatiblity for
