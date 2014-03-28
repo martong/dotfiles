@@ -158,6 +158,14 @@ source ~/.opp.zsh/opp.zsh
 
 source ~/.common_zsh_bash.rc
 
+# Simpulate the delete key I got used to
+real-delete-char()
+{
+	zle vi-forward-char
+	zle backward-delete-char
+}
+zle -N real-delete-char
+
 # Bind generic keys properly for VI-MODE.
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -172,14 +180,14 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Home]}"     ]]  && bindkey -M vicmd  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M vicmd  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M vicmd  "${key[Insert]}"   vi-insert
-[[ -n "${key[Delete]}"   ]]  && bindkey -M vicmd  "${key[Delete]}"   delete-char
+[[ -n "${key[Delete]}"   ]]  && bindkey -M vicmd  "${key[Delete]}"   real-delete-char
 [[ -n "${key[PageUp]}"   ]]  && bindkey -M vicmd  "${key[PageUp]}"   only-local-history-up
 [[ -n "${key[PageDown]}" ]]  && bindkey -M vicmd  "${key[PageDown]}" only-local-history-down
 # vi insert mode
 [[ -n "${key[Home]}"     ]]  && bindkey -M viins  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M viins  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M viins  "${key[Insert]}"   vi-insert
-[[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   backward-delete-char
+[[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   real-delete-char
 [[ -n "${key[PageUp]}"   ]]  && bindkey -M viins  "${key[PageUp]}"   only-local-history-up
 [[ -n "${key[PageDown]}" ]]  && bindkey -M viins  "${key[PageDown]}" only-local-history-down
 
@@ -189,4 +197,6 @@ key[PageDown]=${terminfo[knp]}
 bindkey -M viins "^W" backward-kill-word
 bindkey -M viins "^?" backward-delete-char      # Control-h also deletes the previous char
 bindkey -M viins "^U" backward-kill-line
+
+bindkey -M viins "^[a" accept-and-hold
 
