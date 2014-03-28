@@ -200,3 +200,6 @@ bindkey -M viins "^U" backward-kill-line
 
 bindkey -M viins "^[a" accept-and-hold
 
+# Report CPU usage for commands running longer than 10 seconds
+REPORTTIME=10
+
