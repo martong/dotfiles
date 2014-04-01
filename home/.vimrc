@@ -64,6 +64,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
+Bundle 'Raimondi/delimitMate'
+"Bundle 'YankRing'
+Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 " IDE stuff in a separate file
 "if $VIMIDE == "ide"
 	"source ~/.vimrc.ide
@@ -196,6 +199,11 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 :let g:session_autoload = 'no'
 
 
+" YankRing
+let g:yankring_min_element_length = 2
+let g:yankring_max_element_length = 4194304 " 4M
+nnoremap <silent> <Leader>p :YRShow<CR>
+
 " Custom mappings
 " Moving lines up and down
 "map <A-Down> :m .+1<CR>==
@@ -209,6 +217,7 @@ map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 85<cr>
 map <Leader>w :set wrap!<cr>
+map <Leader>h :set hlsearch!<cr>
 
 
 " TMUX compatiblity for
