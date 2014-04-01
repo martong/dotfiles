@@ -58,6 +58,7 @@ alias gitlog='git log --color --oneline --graph --decorate '
 alias gitwhat='git whatchanged --color --graph --decorate '
 alias gy='NO_GITSTATUS='
 alias gn='NO_GITSTATUS=yes'
+alias gcam='git commit -a -m '
 
 #
 # TMUX
