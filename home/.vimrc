@@ -55,7 +55,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'BufOnly.vim'
 Bundle 'headerguard'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'sjbach/lusty'
 Bundle 'moll/vim-bbye'
 Bundle 'xolox/vim-misc'
@@ -64,16 +64,16 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 " IDE stuff in a separate file
 "if $VIMIDE == "ide"
 	"source ~/.vimrc.ide
 	"echo "VIMIDE"
 "endif
 filetype plugin indent on " required!
-
-
-" Pathogen
-execute pathogen#infect()
 
 
 " Auto commands
@@ -170,16 +170,6 @@ let g:ycm_auto_trigger = 0
 "  \   'erlang' : [':'],
 "  \ }
 
-" Syntastic Config
-" syntastic requires pathogen
-" syntastic is installed on a separate bundle dir
-" to be able to load only when vimide is executed.
-" execute pathogen#infect('bundle_pathogen_ycm/{}')
-" disable temporary
-"let g:syntastic_mode_map = { 'mode': 'passive',
-                               "\ 'active_filetypes': ['ruby', 'php'],
-                               "\ 'passive_filetypes': ['puppet'] }
-
 map gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <Leader>y :YcmDiags<cr>
 "map <F4> :YcmCompleter GoToDefinition<CR>
@@ -194,6 +184,16 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 " vim-session
 :let g:session_autosave = 'no'
 :let g:session_autoload = 'no'
+
+
+" YankRing
+nnoremap <leader>p :YRShow<cr>
+
+
+" DelimitMate
+let g:delimitMate_autoclose = 0
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_matchpairs = "{:}" 
 
 
 " Custom mappings

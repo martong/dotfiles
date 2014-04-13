@@ -1,5 +1,3 @@
-[http]
-	proxy = www-proxy.ericsson.se:8080
 [github]
 	user = martong
 [user]
