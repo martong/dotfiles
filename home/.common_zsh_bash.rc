@@ -8,6 +8,8 @@ export PATH=/proj/cudbdm/tools/external/tup:$PATH
 # clang
 export PATH=/proj/cudbdm/tools/external/clang-3.4/SLED11/bin:$PATH
 export LD_LIBRARY_PATH=/proj/cudbdm/tools/external/clang-3.4/SLED11/lib:$LD_LIBRARY_PATH
+# Boost.Build
+export PATH=/proj/cudbdm/tools/external/boost/Boost.Build/bin:$PATH
 
 umask 002
 
