@@ -64,7 +64,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'Raimondi/delimitMate'
+"Bundle 'Raimondi/delimitMate'
+Bundle 'git@github.com:Raimondi/delimitMate.git'
 "Bundle 'YankRing'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 " IDE stuff in a separate file
@@ -86,6 +87,7 @@ autocmd CursorHold * checktime
 autocmd CursorHoldI * checktime
 " Automatically fix whitspace errors in case of C++ files.
 "autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
+map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
 
 
 " Mini BufExplorer
@@ -204,6 +206,13 @@ let g:yankring_min_element_length = 2
 let g:yankring_max_element_length = 4194304 " 4M
 nnoremap <silent> <Leader>p :YRShow<CR>
 
+
+" DelimitMate
+let g:delimitMate_autoclose = 0
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_matchpairs = "{:}" 
+
+
 " Custom mappings
 " Moving lines up and down
 "map <A-Down> :m .+1<CR>==
@@ -215,7 +224,7 @@ vnoremap <leader>d "_d
 inoremap jj <Esc>
 map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
-map <Leader>8 :vertical resize 85<cr>
+map <Leader>8 :vertical resize 89<cr>
 map <Leader>w :set wrap!<cr>
 map <Leader>h :set hlsearch!<cr>
 
