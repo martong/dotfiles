@@ -200,6 +200,17 @@ bindkey -M viins "^U" backward-kill-line
 
 bindkey -M viins "^[a" accept-and-hold
 
+nothing(){}
+zle -N nothing
+bindkey -M viins "é" nothing
+bindkey -M viins "á" nothing
+bindkey -M viins "ű" nothing
+bindkey -M viins "ő" nothing
+bindkey -M viins "ú" nothing
+bindkey -M viins "ü" nothing
+bindkey -M viins "ó" nothing
+bindkey -M viins "ö" nothing
+
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
 
