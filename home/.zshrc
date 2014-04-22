@@ -211,6 +211,10 @@ bindkey -M viins "ü" nothing
 bindkey -M viins "ó" nothing
 bindkey -M viins "ö" nothing
 
+# By defult Esc is handled as a prefix, zsh waits a key after that,
+# this results shit behaviour in vicmd mode.
+bindkey -M vicmd "^[" nothing
+
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
 
