@@ -48,6 +48,7 @@ colorscheme solarized
 filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
@@ -68,11 +69,18 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'git@github.com:Raimondi/delimitMate.git'
 "Bundle 'YankRing'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
+
+Bundle 'rhysd/vim-clang-format'
+" clang-format dependencies
+Bundle 'kana/vim-operator-user'
+Bundle 'Shougo/vimproc.vim'
+
 " IDE stuff in a separate file
 "if $VIMIDE == "ide"
 	"source ~/.vimrc.ide
 	"echo "VIMIDE"
 "endif
+"
 filetype plugin indent on " required!
 
 
@@ -211,6 +219,18 @@ nnoremap <silent> <Leader>p :YRShow<CR>
 let g:delimitMate_autoclose = 0
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_matchpairs = "{:}" 
+
+
+" clang-format 
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "Auto",
+			\ "TabWidth" : 4,
+			\ "UseTab" : "Always"}
+let g:clang_format#code_style = 'google'
+let g:clang_format#command = '/proj/cudbdm/tools/external/clang-3.4/SLED11/bin/clang-format'
 
 
 " Custom mappings
