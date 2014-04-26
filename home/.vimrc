@@ -196,6 +196,16 @@ let g:delimitMate_expand_cr = 1
 let g:delimitMate_matchpairs = "{:}" 
 
 
+" Tex
+" http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_Leader = '`tex'
+let g:Tex_Leader2 = ',tex'
+
+
 " Custom mappings
 " Moving lines up and down
 "map <A-Down> :m .+1<CR>==
