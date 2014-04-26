@@ -1,0 +1,10 @@
+@lxpanel --profile Lubuntu
+@xscreensaver -no-splash
+@xfce4-power-manager
+@pcmanfm --desktop --profile lubuntu
+@/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+@volumeicon
+@/home/gabor/bin/disable_tapping
+@/usr/bin/xmodmap /home/gabor/x_map_capslock_to_esc
+@/usr/bin/nm-applet
+
