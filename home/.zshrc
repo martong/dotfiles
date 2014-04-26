@@ -214,3 +214,6 @@ bindkey -M viins "ö" nothing
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
 
+# Esc does nothing in vicmd
+bindkey -M vicmd "^[" nothing
+
