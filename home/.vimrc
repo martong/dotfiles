@@ -43,6 +43,11 @@ let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
 
+if $VIMIDE != "ide"
+	let g:loaded_youcompleteme = 1
+else
+	"echo "VIMIDE"
+endif
 
 " Vundle stuff
 filetype off " required!
@@ -75,12 +80,6 @@ Bundle 'rhysd/vim-clang-format'
 Bundle 'kana/vim-operator-user'
 Bundle 'Shougo/vimproc.vim'
 
-" IDE stuff in a separate file
-"if $VIMIDE == "ide"
-	"source ~/.vimrc.ide
-	"echo "VIMIDE"
-"endif
-"
 filetype plugin indent on " required!
 
 
