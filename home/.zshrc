@@ -64,6 +64,8 @@ compinit
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git)
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
+# history-substring-search depends on the custom plugin zsh-syntax-highlighting,
+# therefore it must be installed and loaded before history-substring-search.
 plugins=(vi-mode git screen zsh-syntax-highlighting history-substring-search)
 PER_DIRECTORY_HISTORY_DEFAULT_GLOBAL_HISTORY=true
 
