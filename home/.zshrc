@@ -223,3 +223,7 @@ REPORTTIME=10
 # Esc does nothing in vicmd
 bindkey -M vicmd "^[" nothing
 
+# opp.zsh ~ is not vim-conform
+bindkey -M vicmd '~' vi-swap-case
+
+
