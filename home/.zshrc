@@ -201,6 +201,8 @@ bindkey -M viins "^?" backward-delete-char      # Control-h also deletes the pre
 bindkey -M viins "^U" backward-kill-line
 
 bindkey -M viins "^[a" accept-and-hold
+# Shift-Tab
+bindkey -M viins "^[[Z" reverse-menu-complete
 
 nothing(){}
 zle -N nothing
