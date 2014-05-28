@@ -71,9 +71,10 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
 "Bundle 'Raimondi/delimitMate'
-Bundle 'git@github.com:Raimondi/delimitMate.git'
+"Bundle 'git@github.com:Raimondi/delimitMate.git'
 "Bundle 'YankRing'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
+Bundle 'vim-scripts/a.vim'
 
 Bundle 'rhysd/vim-clang-format'
 " clang-format dependencies
@@ -214,13 +215,11 @@ let g:yankring_max_element_length = 4194304 " 4M
 nnoremap <silent> <Leader>p :YRShow<CR>
 
 
-" DelimitMate
-let g:delimitMate_autoclose = 0
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_matchpairs = "{:}" 
+" a.vim
+let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
 
 
-" clang-format 
+" clang-format
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : -4,
             \ "AllowShortIfStatementsOnASingleLine" : "true",
