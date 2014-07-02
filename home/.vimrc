@@ -70,11 +70,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-"Bundle 'Raimondi/delimitMate'
-"Bundle 'git@github.com:Raimondi/delimitMate.git'
-"Bundle 'YankRing'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 Bundle 'vim-scripts/a.vim'
+Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'rhysd/vim-clang-format'
 " clang-format dependencies
@@ -85,7 +83,7 @@ filetype plugin indent on " required!
 
 
 " Pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
 
 
 " Auto commands

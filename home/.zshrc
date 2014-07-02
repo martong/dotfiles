@@ -76,7 +76,7 @@ function module() {
 	eval `/app/modules/0/bin/modulecmd zsh "$@"`
 }
 # Make solarized colors applied for directories as well (ls).
-eval `dircolors ~/dircolors-solarized/dircolors.ansi-universal`
+#eval `dircolors ~/.dircolors-solarized/dircolors.ansi-universal`
 
 #  Completion from tmux pane
 _tmux_pane_words() {
