@@ -66,7 +66,7 @@ compinit
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
 # history-substring-search depends on the custom plugin zsh-syntax-highlighting,
 # therefore it must be installed and loaded before history-substring-search.
-plugins=(vi-mode git screen zsh-syntax-highlighting history-substring-search)
+plugins=(vi-mode git screen zsh-syntax-highlighting history-substring-search gradle)
 PER_DIRECTORY_HISTORY_DEFAULT_GLOBAL_HISTORY=true
 
 source $ZSH/oh-my-zsh.sh
@@ -157,6 +157,9 @@ bindkey -M viins 'jj' vi-cmd-mode
 
 # Enabling vim text-objects (ciw and alike) for vi-mode
 source ~/.opp.zsh/opp.zsh
+
+HISTSIZE=30000
+SAVEHIST=30000
 
 source ~/.common_zsh_bash.rc
 
