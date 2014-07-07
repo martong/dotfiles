@@ -73,6 +73,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 Bundle 'vim-scripts/a.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'wincent/command-t'
 
 Bundle 'rhysd/vim-clang-format'
 " clang-format dependencies
@@ -226,7 +227,7 @@ let g:clang_format#style_options = {
 			\ "TabWidth" : 4,
 			\ "UseTab" : "Always"}
 let g:clang_format#code_style = 'google'
-let g:clang_format#command = '/proj/cudbdm/tools/external/clang-3.4/SLED11/bin/clang-format'
+let g:clang_format#command = '/Users/mg/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
 
 
 " Custom mappings
