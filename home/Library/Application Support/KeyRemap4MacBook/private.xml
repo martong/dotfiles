@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root>
+  <inputsourcedef>
+    <name>US</name>
+    <inputsourceid_prefix>com.apple.keylayout.US</inputsourceid_prefix>
+  </inputsourcedef>
+
+  <!--<item>-->
+    <!--<name>Swap Space and Tab</name>-->
+    <!--<identifier>private.my_dvorak_swap_space_and_tab</identifier>-->
+    <!--<inputsource_only>MY_DVORAK</inputsource_only>-->
+    <!--<autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::TAB</autogen>-->
+    <!--<autogen>__KeyToKey__ KeyCode::TAB, KeyCode::SPACE</autogen>-->
+  <!--</item>-->
+
+  <item>
+	<name>Section(§) to Backquote(`) only in US layout</name>
+	<identifier>remap.uk_section2backquote.only_in_us_layout</identifier>
+	<inputsource_only>US</inputsource_only>
+	<autogen>__KeyToKey__ KeyCode::UK_SECTION, KeyCode::BACKQUOTE</autogen>
+  </item>
+
+</root>
