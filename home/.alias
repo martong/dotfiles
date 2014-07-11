@@ -1,59 +1,17 @@
 #
 # directories
 #
-#alias cdlicensing='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_Lce'
-#alias cdliblogger='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_Log/CAH_Logger'
-#alias cdlibalarms='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_FM/CAH_FM_If'
-##alias cdcudb='cd /vobs/gdb/cudb'
-#alias cdisotar='cd /vobs/gdb/cudb/deliveries/ISO_tar'
-#alias cdsources='cd /vobs/gdb/cudb/sources'
-#alias cddeliveries='cd /vobs/gdb/cudb/deliveries'
-#alias cddesign='cd /vobs/gdb/cudb/design'
-#alias cdcs='cd /vobs/gdb/cudb/design/config_specs'
-#alias cd3pp='cd /vobs/gdb/cudb/3pp'
-#alias cdoam='cd /vobs/gdb/cudb/sources/CRH_OAM'
-##alias cdcm='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_CM'
-##alias cdimm='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_CM/CXC_CM_ImmModel'
-#alias cdimmcc='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_CM/CAH_CM_ImmCC'
-##alias cdoi='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_CM/CAH_CM_IMM_OI'
-#alias cdldapfe='cd /vobs/gdb/cudb/sources/CRH_DataAccess/CNH_LDAP/CAH_LDAP_FE'
-#alias cddoc='cd /vobs/gdb/cudb/design/functional'
-##alias cdtoni='cd /home/ethasas'
-#alias cdmonitoring='cd /vobs/gdb/cudb/sources/CRH_Monitoring'
-#alias cdsm='cd /vobs/gdb/cudb/sources/CRH_Monitoring/CNH_SystemMonitor/CAH_SM_Process'
-#alias cdcmcc='cd /vobs/gdb/cudb/sources/CRH_Storage/CNH_Engine/CAH_SM_Config'
-#alias cdlibsmmcp='cd /vobs/gdb/cudb/sources/CRH_Monitoring/CNH_SystemMonitor/CAH_SM_If'
-#alias cdlibcdxq='cd /vobs/gdb/cudb/sources/CRH_OAM/CNH_CM/CAH_CM_ConfigParser'
-#alias cdmr='cd /vobs/gdb/cudb/sources/CRH_Monitoring/CNH_MasterRecovery'
-#alias cdDeliveries='cd /proj/madridcudb/cudb_sec/Design/Deliveries'
-#alias cddesign_tools='cd /proj/cudbdm/tools/internal/'
-#alias cdibsa='cd /vobs/gdb/cudb/sources/CRH_DataAccess/CNH_SubscriberAllocation'
-#alias cdobs='cd /vobs/gdb/cudb/sources/CRH_Monitoring/CNH_Observability'
-#alias cdc='cd ~/WORK/c2012'
-##alias ct=cleartool
-#alias fttool='ssh ftuser@10.43.48.58'
-
-#alias cdtools='cd /proj/cudbdm/tools/external/'
-hash -d tools=/proj/cudbdm/tools/external/
-hash -d l=/local/scratch/egbomrt/
-
-#
-# CC
-#
-alias ctco='cleartool co -nc -unr'
-alias ctci='cleartool ci -nc'
-alias ctlsco='cleartool lsco -r -cview -s'
-alias ctmkelem='cleartool mkelem -nc'
-alias ctmkdir='cleartool mkdir -nc'
-alias cv='cleartool pwv'
+hash -d g=$HOME/git
 
 #
 # VIM
 #
-VIM=/usr/local/Cellar/macvim/7.4-73/bin/
-alias gvimide='VIMIDE=ide $VIM/gvim'
-alias vimide='VIMIDE=ide $VIM/mvim -v'
-alias vim_pure='$VIM/mvim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
+#VIMDIR=/usr/local/Cellar/macvim/7.4-73/bin/
+vim_=`which gvim`
+VIMDIR=`dirname $vim_`
+alias gvimide='VIMIDE=ide $VIMDIR/gvim'
+alias vimide='VIMIDE=ide $VIMDIR/mvim -v'
+alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
 
 #
 # GIT
