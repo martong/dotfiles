@@ -66,17 +66,15 @@ compinit
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
 # history-substring-search depends on the custom plugin zsh-syntax-highlighting,
 # therefore it must be installed and loaded before history-substring-search.
-plugins=(vi-mode git screen zsh-syntax-highlighting history-substring-search gradle)
-PER_DIRECTORY_HISTORY_DEFAULT_GLOBAL_HISTORY=true
+plugins=(brew git git-extras zsh-syntax-highlighting history-substring-search gradle)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-function module() {
-	eval `/app/modules/0/bin/modulecmd zsh "$@"`
-}
-# Make solarized colors applied for directories as well (ls).
-#eval `dircolors ~/.dircolors-solarized/dircolors.ansi-universal`
+# Not using vi-mode plugin
+bindkey -v
+# allow v to edit the command line (standard behaviour)
+autoload -Uz edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 #  Completion from tmux pane
 _tmux_pane_words() {
@@ -209,14 +207,6 @@ bindkey -M viins "^[[Z" reverse-menu-complete
 
 nothing(){}
 zle -N nothing
-bindkey -M viins "é" nothing
-bindkey -M viins "á" nothing
-bindkey -M viins "ű" nothing
-bindkey -M viins "ő" nothing
-bindkey -M viins "ú" nothing
-bindkey -M viins "ü" nothing
-bindkey -M viins "ó" nothing
-bindkey -M viins "ö" nothing
 
 # By defult Esc is handled as a prefix, zsh waits a key after that,
 # this results shit behaviour in vicmd mode.
@@ -224,9 +214,6 @@ bindkey -M vicmd "^[" nothing
 
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
-
-# Esc does nothing in vicmd
-bindkey -M vicmd "^[" nothing
 
 # opp.zsh ~ is not vim-conform
 bindkey -M vicmd '~' vi-swap-case
