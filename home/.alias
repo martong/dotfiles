@@ -27,3 +27,8 @@ alias gcam='git commit -a -m '
 #
 alias tmux-rename='tmux set-option allow-rename off && tmux rename-window'
 
+# because typing 'cd' is A LOT of work!!
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
