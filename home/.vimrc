@@ -227,7 +227,7 @@ let g:clang_format#style_options = {
 			\ "TabWidth" : 4,
 			\ "UseTab" : "Always"}
 let g:clang_format#code_style = 'google'
-let g:clang_format#command = '/Users/mg/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
+let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
 
 
 " Custom mappings
