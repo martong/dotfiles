@@ -5,11 +5,12 @@ function git_prompt_info2() {
 		ref=$(git symbolic-ref HEAD 2> /dev/null) || return
 		echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 	else
-		git_prompt_info
+		#git_prompt_info
 		#echo -e "$(printBranch)"
+		git_super_status
 	fi
 }
-NO_GITSTATUS="yes"
+#NO_GITSTATUS="yes"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
