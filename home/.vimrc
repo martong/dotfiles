@@ -54,6 +54,8 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
+"Bundle 'CIB/vim-rtags'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
@@ -65,6 +67,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'sjbach/lusty'
 Bundle 'moll/vim-bbye'
 Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-reload'
 Bundle 'xolox/vim-session'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
@@ -228,6 +231,11 @@ let g:clang_format#style_options = {
 			\ "UseTab" : "Always"}
 let g:clang_format#code_style = 'google'
 let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
+
+
+" rtags
+map \j :call rtags#JumpTo()<CR>
+map \r :call rtags#FindRefs()<CR>
 
 
 " Custom mappings
