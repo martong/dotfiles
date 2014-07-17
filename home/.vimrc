@@ -31,6 +31,8 @@ set splitright
 " Allow hiding an unsaved buffer
 set hidden
 
+" Store swap files in fixed location, not current directory.
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
 " Solarized colorscheme
 " http://stackoverflow.com/questions/12774141/strange-changing-background-color-in-vim-solarized
