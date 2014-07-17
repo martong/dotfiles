@@ -67,15 +67,9 @@ compinit
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
 # history-substring-search depends on the custom plugin zsh-syntax-highlighting,
 # therefore it must be installed and loaded before history-substring-search.
-plugins=(brew git git-extras zsh-syntax-highlighting history-substring-search gradle)
+plugins=(brew vi-mode git git-extras zsh-syntax-highlighting history-substring-search gradle)
 
 source $ZSH/oh-my-zsh.sh
-
-# Not using vi-mode plugin
-bindkey -v
-# allow v to edit the command line (standard behaviour)
-autoload -Uz edit-command-line
-bindkey -M vicmd 'v' edit-command-line
 
 #  Completion from tmux pane
 _tmux_pane_words() {
