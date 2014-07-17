@@ -1,7 +1,8 @@
 #
 # directories
 #
-hash -d g=$HOME/git
+hash -d g=$HOME/WORK/git
+hash -d p=$HOME/WORK/pride
 
 #
 # VIM
