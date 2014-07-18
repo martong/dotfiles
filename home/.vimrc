@@ -135,8 +135,7 @@ let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
 " CommandT config
 let g:CommandTNeverShowDotFiles = 1
 set wildignore+=*.o
-set wildignore+=*build*
-set wildignore+=*lastrun*
+"set wildignore+=*build*
 "set wildignore+=*test*
 
 
@@ -254,7 +253,7 @@ map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 89<cr>
 map <Leader>w :set wrap!<cr>
 map <Leader>h :set hlsearch!<cr>
-
+nnoremap gp `[v`]
 
 " TMUX compatiblity for
 " keys combined with modifiers such as Shift, Control, and Alt.
