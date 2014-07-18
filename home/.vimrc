@@ -100,6 +100,8 @@ autocmd CursorHoldI * checktime
 " Automatically fix whitspace errors in case of C++ files.
 "autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
 map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
+" Automatically open quickfix window after e.g. :vimgrep
+autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
 " Mini BufExplorer
