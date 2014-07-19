@@ -34,6 +34,9 @@ set hidden
 " Store swap files in fixed location, not current directory.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
+" Extra leader key
+map <Space> <Leader>
+
 " Solarized colorscheme
 " http://stackoverflow.com/questions/12774141/strange-changing-background-color-in-vim-solarized
 ":set t_ut=
@@ -255,7 +258,10 @@ map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 89<cr>
 map <Leader>w :set wrap!<cr>
 map <Leader>h :set hlsearch!<cr>
+set pastetoggle=<Leader>P
+" Select pasted text
 nnoremap gp `[v`]
+
 
 " TMUX compatiblity for
 " keys combined with modifiers such as Shift, Control, and Alt.
