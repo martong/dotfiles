@@ -30,9 +30,10 @@ set splitbelow
 set splitright
 " Allow hiding an unsaved buffer
 set hidden
-
 " Store swap files in fixed location, not current directory.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+set ignorecase
+set incsearch
 
 " Extra leader key
 map <Space> <Leader>
@@ -59,6 +60,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'jlanzarotta/bufexplorer'
 Bundle 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
 "Bundle 'CIB/vim-rtags'
 Bundle 'gmarik/vundle'
@@ -105,6 +107,15 @@ autocmd CursorHoldI * checktime
 map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
 " Automatically open quickfix window after e.g. :vimgrep
 autocmd QuickFixCmdPost [^l]* nested cwindow
+
+
+" BufExplorer
+noremap <Leader>B :BufExplorer<CR>
+" nunmap somehow is not working
+"nunmap <Leader>bs
+"nunmap <Leader>bv
+noremap <Leader>_Bs :BufExplorerHorizontalSplit<CR>
+noremap <Leader>_Bv :BufExplorerVerticalSplit<CR>
 
 
 " Mini BufExplorer
