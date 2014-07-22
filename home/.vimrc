@@ -187,7 +187,7 @@ endfunction
 "let g:ycm_server_use_vim_stdout = 1
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_global_ycm_extra_conf = '/home/egbomrt/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
@@ -212,10 +212,8 @@ let g:ycm_auto_trigger = 0
                                "\ 'active_filetypes': ['ruby', 'php'],
                                "\ 'passive_filetypes': ['puppet'] }
 
-map gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map gd :YcmCompleter GoTo<CR>
 map <Leader>y :YcmDiags<cr>
-"map <F4> :YcmCompleter GoToDefinition<CR>
-"map <F5> :YcmCompleter GoToDeclaration<CR>
 
 
 " Lusty Juggler
