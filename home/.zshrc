@@ -12,6 +12,12 @@ function git_prompt_info2() {
 }
 #NO_GITSTATUS="yes"
 
+function rename_iterm2_tab() {
+	WINDOW_NAME=$1
+	export DISABLE_AUTO_TITLE="true"
+	echo -ne "\e]1;$WINDOW_NAME\a"
+}
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
