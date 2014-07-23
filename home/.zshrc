@@ -73,7 +73,7 @@ compinit
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
 # history-substring-search depends on the custom plugin zsh-syntax-highlighting,
 # therefore it must be installed and loaded before history-substring-search.
-plugins=(brew vi-mode git git-extras zsh-syntax-highlighting history-substring-search gradle)
+plugins=(wd autojump brew vi-mode git git-extras zsh-syntax-highlighting history-substring-search gradle)
 
 source $ZSH/oh-my-zsh.sh
 
