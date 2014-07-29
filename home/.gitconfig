@@ -1,10 +1,11 @@
 #[http]
 #	proxy = www-proxy.ericsson.se:8080
 #	sslVerify = false
-[github]
-	user = martong
+;[github]
+	;user = martong
 [user]
-	email = marton.gabor@prezi.com
+	email = gabor.marton@prezi.com
+	name = Gabor Marton
 [diff]
 #	tool = kdiff3
 	tool = vimdiff
