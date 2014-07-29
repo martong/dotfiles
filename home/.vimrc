@@ -60,6 +60,8 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'h1mesuke/vim-unittest'
+Bundle 'tpope/vim-fugitive'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
 "Bundle 'CIB/vim-rtags'
@@ -269,7 +271,9 @@ map <Leader>w :set wrap!<cr>
 map <Leader>h :set hlsearch!<cr>
 set pastetoggle=<Leader>P
 " Select pasted text
-nnoremap gp `[v`]
+nnoremap vp `[v`]
+" Put full path on the paste register
+nmap cp :let @" = expand("%:p")<cr>
 
 
 " TMUX compatiblity for
