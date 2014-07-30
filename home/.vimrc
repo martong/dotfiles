@@ -9,8 +9,6 @@ set shiftwidth=4
 set linebreak
 " Enable syntax highlighting
 syntax on
-" Select case-insenitiv search (not default)
-"set ignorecase
 " Show cursor line and column in the status line
 set ruler
 " Show matching brackets
@@ -60,6 +58,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'tpope/vim-sleuth'
 Bundle 'h1mesuke/vim-unittest'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jlanzarotta/bufexplorer'
@@ -271,7 +270,7 @@ map <Leader>w :set wrap!<cr>
 map <Leader>h :set hlsearch!<cr>
 set pastetoggle=<Leader>P
 " Select pasted text
-nnoremap vp `[v`]
+nnoremap gV `[v`]
 " Put full path on the paste register
 nmap cp :let @" = expand("%:p")<cr>
 
