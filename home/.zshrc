@@ -1,9 +1,23 @@
 # FIX FOR OH MY ZSH GIT PROMPT SLOWNESS
 # http://marc-abramowitz.com/archives/2012/04/10/fix-for-oh-my-zsh-git-svn-prompt-slowness/
+function addGitSuperStatusHooks {
+  add-zsh-hook chpwd chpwd_update_git_vars
+  add-zsh-hook preexec preexec_update_git_vars
+  add-zsh-hook precmd precmd_update_git_vars
+}
+function removeGitSuperStatusHooks {
+  add-zsh-hook -d chpwd chpwd_update_git_vars
+  add-zsh-hook -d preexec preexec_update_git_vars
+  add-zsh-hook -d precmd precmd_update_git_vars
+}
 function git_prompt_info2() {
-	if [ -n "$NO_GITSTATUS" ]; then
-		ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-		echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+	if [ "$NO_GITSTATUS" = "absolutelyNothing" ]; then
+		echo "no-git-status"
+	elif [ -n "$NO_GITSTATUS" ]; then
+		# From gitfast
+		git_prompt_info
+		#ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+		#echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 	else
 		#git_prompt_info
 		#echo -e "$(printBranch)"
@@ -73,7 +87,7 @@ compinit
 #plugins=(git screen zsh-syntax-highlighting colorize per-directory-history)
 # history-substring-search depends on the custom plugin zsh-syntax-highlighting,
 # therefore it must be installed and loaded before history-substring-search.
-plugins=(wd autojump brew vi-mode git git-extras zsh-syntax-highlighting history-substring-search gradle)
+plugins=(wd autojump brew vi-mode gitfast git-extras zsh-syntax-highlighting history-substring-search gradle)
 
 source $ZSH/oh-my-zsh.sh
 

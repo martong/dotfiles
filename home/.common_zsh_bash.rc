@@ -1,7 +1,7 @@
 # tmux 1.8 for sles11
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/proj/cudbdm/tools/external/libevent/lib/
 #export PATH=/proj/cudbdm/tools/external/tmux-1.9a/SLES11/bin:$PATH
-export PATH=/Users/mg/archives/rtags_build/bin:$PATH
+export PATH=/Users/mg/archives/rtags_build4/bin:$PATH
 
 umask 002
 
