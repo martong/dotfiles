@@ -1,0 +1,4 @@
+#!/bin/sh
+cd build/osx_x64_debug/make
+make -j8
+
