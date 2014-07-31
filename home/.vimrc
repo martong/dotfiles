@@ -214,7 +214,8 @@ let g:ycm_auto_trigger = 0
                                "\ 'passive_filetypes': ['puppet'] }
 
 map gd :YcmCompleter GoTo<CR>
-map <Leader>y :YcmDiags<cr>
+map <Leader>Y :YcmDiags<cr>
+map <Leader>y :YcmForceCompileAndDiagnostics<cr>
 
 
 " Lusty Juggler
