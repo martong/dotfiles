@@ -48,7 +48,10 @@ set background=dark
 colorscheme solarized
 
 if $VIMIDE != "ide"
-	let g:loaded_youcompleteme = 1
+  let g:loaded_youcompleteme = 1
+  set wildignore+=*.o
+  set wildignore+=*build*
+  "set wildignore+=*test*
 else
 	"echo "VIMIDE"
 endif
@@ -58,6 +61,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-sleuth'
 Bundle 'h1mesuke/vim-unittest'
 Bundle 'tpope/vim-fugitive'
@@ -151,9 +155,6 @@ let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
 
 " CommandT config
 let g:CommandTNeverShowDotFiles = 1
-set wildignore+=*.o
-"set wildignore+=*build*
-"set wildignore+=*test*
 
 
 " Taglist config
