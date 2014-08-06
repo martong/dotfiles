@@ -254,12 +254,14 @@ let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src
 
 " clang-format
 let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "true",
-            \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "Standard" : "Auto",
-			\ "TabWidth" : 4,
-			\ "UseTab" : "Always"}
+  \ "AccessModifierOffset" : -4,
+  \ "AllowShortIfStatementsOnASingleLine" : "true",
+  \ "AllowShortLoopsOnASingleLine" : "true",
+  \ "AlwaysBreakTemplateDeclarations" : "true",
+  \ "BreakBeforeBraces" : "Stroustrup",
+  \ "Standard" : "Auto",
+  \ "TabWidth" : 4,
+  \ "UseTab" : "Always"}
 let g:clang_format#code_style = 'google'
 let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
 
