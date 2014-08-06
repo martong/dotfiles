@@ -14,3 +14,9 @@ set macmeta
 nnoremap <M-h> gT
 nnoremap <M-l> gt
 
+" Maximize window when start
+set lines=499 columns=499
+
+" Airline config
+let g:airline_powerline_fonts = 1
+set guifont=Inconsolata\ for\ Powerline:h13

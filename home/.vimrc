@@ -32,6 +32,8 @@ set hidden
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 set ignorecase
 set incsearch
+" terminal colors
+set t_Co=256
 
 " Extra leader key
 map <Space> <Leader>
@@ -49,11 +51,11 @@ colorscheme solarized
 
 if $VIMIDE != "ide"
   let g:loaded_youcompleteme = 1
+else
+  "echo "VIMIDE"
   set wildignore+=*.o
   set wildignore+=*build*
   "set wildignore+=*test*
-else
-	"echo "VIMIDE"
 endif
 
 " Vundle stuff
@@ -142,6 +144,17 @@ hi link MBEVisibleActiveChanged airline_warning
 " Airline config
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set laststatus=2
+let g:airline#extensions#default#section_truncate_width = {
+    \ 'b': 100,
+    \ 'x': 60,
+    \ 'y': 88,
+    \ 'z': 45,
+    \ 'warning': 60
+    \ }
+let g:airline#extensions#default#layout = [
+      \ [ 'a', 'c', 'b' ],
+      \ [ 'x', 'y', 'z', 'warning' ]
+      \ ]
 
 
 " NERDTree config
