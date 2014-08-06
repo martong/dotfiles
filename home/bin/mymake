@@ -1,4 +1,5 @@
 #!/bin/sh
 cd build/osx_x64_debug/make
 make -j8
+#./foundation-unittest --gtest_color=no --gtest_filter="LoggingTest*"
 
