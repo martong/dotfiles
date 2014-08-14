@@ -32,6 +32,10 @@ function rename_iterm2_tab() {
 	echo -ne "\e]1;$WINDOW_NAME\a"
 }
 
+function realpath() {
+  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
