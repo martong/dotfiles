@@ -29,7 +29,8 @@ set splitright
 " Allow hiding an unsaved buffer
 set hidden
 " Store swap files in fixed location, not current directory.
-set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+"set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+set noswapfile
 set ignorecase
 set incsearch
 " terminal colors
@@ -156,7 +157,6 @@ let g:airline#extensions#default#layout = [
       \ [ 'x', 'y', 'z', 'warning' ]
       \ ]
 
-
 " NERDTree config
 map <Leader>n :NERDTreeFocus<cr>
 map <Leader>f :NERDTreeFind<cr>
@@ -168,6 +168,7 @@ let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
 
 " CommandT config
 let g:CommandTNeverShowDotFiles = 1
+let g:CommandTMaxFiles = 100000
 
 
 " Taglist config
