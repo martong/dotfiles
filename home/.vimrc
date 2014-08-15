@@ -119,7 +119,7 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
 " BufExplorer
-noremap <Leader>B :BufExplorer<CR>
+noremap <Leader>v :BufExplorer<CR>
 " nunmap somehow is not working
 "nunmap <Leader>bs
 "nunmap <Leader>bv
