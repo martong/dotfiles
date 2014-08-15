@@ -64,6 +64,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-sleuth'
 Bundle 'h1mesuke/vim-unittest'
