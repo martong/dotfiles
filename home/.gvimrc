@@ -18,6 +18,12 @@ nnoremap <M-l> gt
 " Maximize window when start
 set lines=499 columns=499
 
+" Disable vertical scrollbars
+set guioptions-=L
+set guioptions-=l
+set guioptions-=R
+set guioptions-=r
+
 " Airline config
 let g:airline_powerline_fonts = 1
 set guifont=Inconsolata\ for\ Powerline:h13
