@@ -64,6 +64,9 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Bundle 'gilligan/vim-lldb'
+"Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
+Bundle 'vim-scripts/Conque-GDB'
 Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-sleuth'
@@ -232,6 +235,10 @@ let g:ycm_auto_trigger = 0
 map gd :YcmCompleter GoTo<CR>
 map <Leader>Y :YcmDiags<cr>
 map <Leader>y :YcmForceCompileAndDiagnostics<cr>
+
+
+" ConqueGdb
+let g:ConqueGdb_Leader = '<Leader>g'
 
 
 " Lusty Juggler
