@@ -64,6 +64,9 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'tpope/vim-pathogen'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tomtom/tcomment_vim'
 "Bundle 'gilligan/vim-lldb'
 "Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
 Bundle 'vim-scripts/Conque-GDB'
@@ -107,6 +110,7 @@ filetype plugin indent on " required!
 
 " Pathogen
 "execute pathogen#infect()
+execute pathogen#infect('bundle_pathogen/{}')
 
 
 " Auto commands
