@@ -225,17 +225,6 @@ let g:ycm_auto_trigger = 0
 "  \   'lua' : ['.', ':'],
 "  \   'erlang' : [':'],
 "  \ }
-
-" Syntastic Config
-" syntastic requires pathogen
-" syntastic is installed on a separate bundle dir
-" to be able to load only when vimide is executed.
-" execute pathogen#infect('bundle_pathogen_ycm/{}')
-" disable temporary
-"let g:syntastic_mode_map = { 'mode': 'passive',
-                               "\ 'active_filetypes': ['ruby', 'php'],
-                               "\ 'passive_filetypes': ['puppet'] }
-
 map gd :YcmCompleter GoTo<CR>
 map <Leader>Y :YcmDiags<cr>
 map <Leader>y :YcmForceCompileAndDiagnostics<cr>
