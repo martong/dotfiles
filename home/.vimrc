@@ -95,7 +95,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
+"Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 Bundle 'vim-scripts/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/command-t'
@@ -256,9 +256,10 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 
 
 " YankRing
-let g:yankring_min_element_length = 2
-let g:yankring_max_element_length = 4194304 " 4M
-nnoremap <silent> <Leader>p :YRShow<CR>
+" Note: Repeating paste with . is not possible with yankrink :(
+"let g:yankring_min_element_length = 2
+"let g:yankring_max_element_length = 4194304 " 4M
+"nnoremap <silent> <Leader>p :YRShow<CR>
 
 
 " a.vim
