@@ -261,7 +261,6 @@ let g:clang_format#style_options = {
   \ "AllowShortIfStatementsOnASingleLine" : "true",
   \ "AllowShortLoopsOnASingleLine" : "true",
   \ "AlwaysBreakTemplateDeclarations" : "true",
-  \ "BreakBeforeBraces" : "Stroustrup",
   \ "Standard" : "Auto",
   \ "TabWidth" : 4,
   \ "UseTab" : "Always"}
