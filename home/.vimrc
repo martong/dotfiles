@@ -115,9 +115,9 @@ execute pathogen#infect('bundle_pathogen/{}')
 
 " Auto commands
 " Check whether a file has been changed by an other process then vim.
-autocmd BufEnter * checktime
-autocmd CursorHold * checktime
-autocmd CursorHoldI * checktime
+autocmd BufEnter * silent! checktime
+autocmd CursorHold * silent! checktime
+autocmd CursorHoldI * silent! checktime
 " Automatically fix whitspace errors in case of C++ files.
 "autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
 map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
