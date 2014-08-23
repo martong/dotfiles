@@ -30,6 +30,8 @@ set splitbelow
 set splitright
 " Allow hiding an unsaved buffer
 set hidden
+" terminal colors
+set t_Co=256
 
 
 " Solarized colorscheme
@@ -49,6 +51,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'bronson/vim-trailing-whitespace'
@@ -64,10 +67,14 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'vim-scripts/a.vim'
+Bundle 'rhysd/vim-clang-format'
+" clang-format dependencies
+Bundle 'kana/vim-operator-user'
+Bundle 'Shougo/vimproc.vim'
 " IDE stuff in a separate file
 "if $VIMIDE == "ide"
 	"source ~/.vimrc.ide
@@ -190,12 +197,6 @@ noremap <silent> <C-E> :LustyJuggler<CR>
 nnoremap <leader>p :YRShow<cr>
 
 
-" DelimitMate
-let g:delimitMate_autoclose = 0
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_matchpairs = "{:}" 
-
-
 " Tex
 " http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
 let g:Tex_SmartKeyBS = 0
@@ -204,6 +205,23 @@ let g:Tex_SmartKeyDot = 0
 let g:Imap_UsePlaceHolders = 0
 let g:Tex_Leader = '`tex'
 let g:Tex_Leader2 = ',tex'
+
+
+" a.vim
+let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
+
+
+" clang-format
+let g:clang_format#style_options = {
+  \ "AccessModifierOffset" : -4,
+  \ "AllowShortIfStatementsOnASingleLine" : "true",
+  \ "AllowShortLoopsOnASingleLine" : "true",
+  \ "AlwaysBreakTemplateDeclarations" : "true",
+  \ "Standard" : "Auto",
+  \ "TabWidth" : 4,
+  \ "UseTab" : "Always"}
+let g:clang_format#code_style = 'google'
+let g:clang_format#command = '/usr/bin/clang-format-3.4'
 
 
 " Custom mappings

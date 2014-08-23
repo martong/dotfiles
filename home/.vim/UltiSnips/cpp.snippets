@@ -1,0 +1,64 @@
+snippet ns "namespace .. (namespace)"
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
+{
+	${VISUAL}${0}
+}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
+endsnippet
+
+snippet n
+namespace ${1:name} {
+
+${VISUAL}${0}
+
+}  // namespace $1
+endsnippet
+
+snippet n2
+namespace ${1:name1} {
+namespace ${2:name2} {
+
+${VISUAL}${0}
+
+}  // namespace $2
+}  // namespace $1
+endsnippet
+
+snippet n3
+namespace ${1:name1} {
+namespace ${2:name2} {
+namespace ${3:name3} {
+
+${VISUAL}${0}
+
+}  // namespace $3
+}  // namespace $2
+}  // namespace $1
+endsnippet
+
+snippet n4
+namespace ${1:name1} {
+namespace ${2:name2} {
+namespace ${3:name3} {
+namespace ${4:name4} {
+
+${VISUAL}${0}
+
+}  // namespace $4
+}  // namespace $3
+}  // namespace $2
+}  // namespace $1
+endsnippet
+
+snippet t
+template <typename ${0}>
+endsnippet
+
+snippet try
+try {
+	${VISUAL}
+}
+catch(${1:std::exception}& e) {
+	${0}
+}
+endsnippet
+
