@@ -65,6 +65,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'tpope/vim-pathogen'
+Bundle 'SirVer/ultisnips'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tomtom/tcomment_vim'
 "Bundle 'gilligan/vim-lldb'
@@ -229,6 +230,34 @@ map gd :YcmCompleter GoTo<CR>
 map <Leader>Y :YcmDiags<cr>
 map <Leader>y :YcmForceCompileAndDiagnostics<cr>
 
+" UltiSnips config
+"let g:UltiSnipsExpandTrigger = '<c-l>'
+"let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+"let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+" The following is a workaround to work with <tab> and <s-tab> and with YCM.
+" http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsListSnippets="<c-e>"
+" this mapping Enter key to <C-y> to chose the current highlight item
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ConqueGdb
 let g:ConqueGdb_Leader = '<Leader>g'
