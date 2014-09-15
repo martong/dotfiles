@@ -169,11 +169,13 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 bindkey -M vicmd '^r' redo
 bindkey -M vicmd 'u' undo
-bindkey -M viins 'jj' vi-cmd-mode
 
+bindkey -M vicmd 'g~' vi-oper-swap-case
+# opp.zsh ~ is not vim-conform
+bindkey -M vicmd '~' vi-swap-case
 
 # Enabling vim text-objects (ciw and alike) for vi-mode
-source ~/.opp.zsh/opp.zsh
+#source ~/.opp.zsh/opp.zsh
 
 HISTSIZE=30000
 SAVEHIST=30000
@@ -233,8 +235,5 @@ bindkey -M vicmd "^[" nothing
 
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
-
-# opp.zsh ~ is not vim-conform
-bindkey -M vicmd '~' vi-swap-case
 
 
