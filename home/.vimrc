@@ -35,6 +35,19 @@ set ignorecase
 set incsearch
 " terminal colors
 set t_Co=256
+" tab completion
+" bash style
+set wildmode=longest,list
+" zsh style
+"set wildmenu
+"set wildmode=full
+" set command history size
+set history=500
+" Set the <C-p> and <C-n> chords to go backward and forward through our command history.
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+" Mute bell
+"set vb t_vb=
 
 " Extra leader key
 map <Space> <Leader>
@@ -64,6 +77,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-pathogen'
 Bundle 'SirVer/ultisnips'
 Bundle 'tpope/vim-unimpaired'
@@ -319,7 +333,7 @@ map <Leader>h :set hlsearch!<cr>
 set pastetoggle=<Leader>P
 " Select pasted text
 nnoremap gV `[v`]
-" Put full path on the paste register
+" Put full path on the default register
 nmap cp :let @" = expand("%:p")<cr>
 
 
