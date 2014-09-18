@@ -134,19 +134,11 @@ def GetCompilationInfoForFile( filename ):
         if compilation_info.compiler_flags_:
           return compilation_info
 
-    # If we cannot find the exact matching source file for the header, then
-    # try to find the first source which includes the header.
-    # If that is found, than return that's flags.
-    basename = os.path.split( filename ) [ 1 ]
-    dirname = os.path.dirname( filename )
-    candidateSrcFile = findFirstFileWhichIncludesThisHeader(basename)
-    if candidateSrcFile != None:
-      print "Matching src file, based on method1: " + candidateSrcFile
-      return database.GetCompilationInfoForFile(candidateSrcFile)
-
     # If still not found a candidate translation unit,
     # then try to browse the json db to find one,
     # which uses the directory of our header as an include path (-I, -isystem).
+    basename = os.path.split( filename ) [ 1 ]
+    dirname = os.path.dirname( filename )
     compilation_database_file = compilation_database_folder + "/" + "compile_commands.json"
     candidateSrcFile = searchForTranslationUnitWhichIncludesPath(compilation_database_file, dirname)
     if candidateSrcFile != None:
