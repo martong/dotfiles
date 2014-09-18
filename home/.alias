@@ -35,3 +35,6 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
+
+# mac find
+alias mf='mdfind -onlyin . '
