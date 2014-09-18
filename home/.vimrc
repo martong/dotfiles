@@ -43,14 +43,9 @@ set wildmode=longest,list
 "set wildmode=full
 " set command history size
 set history=500
-" Set the <C-p> and <C-n> chords to go backward and forward through our command history.
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
 " Mute bell
 "set vb t_vb=
 
-" Extra leader key
-map <Space> <Leader>
 
 " Solarized colorscheme
 " http://stackoverflow.com/questions/12774141/strange-changing-background-color-in-vim-solarized
@@ -81,7 +76,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-pathogen'
 Bundle 'SirVer/ultisnips'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tomtom/tcomment_vim'
 "Bundle 'gilligan/vim-lldb'
 "Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
 Bundle 'vim-scripts/Conque-GDB'
@@ -92,7 +86,6 @@ Bundle 'h1mesuke/vim-unittest'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
-"Bundle 'CIB/vim-rtags'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
@@ -101,16 +94,17 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'BufOnly.vim'
 Bundle 'headerguard'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'sjbach/lusty'
+" :Bdelete --> does not close windows, just the buffer.
 Bundle 'moll/vim-bbye'
+" vim-reload, vim-session depends on it
 Bundle 'xolox/vim-misc'
+" automatically reloads various types of Vim scripts as you're editing them
 Bundle 'xolox/vim-reload'
 Bundle 'xolox/vim-session'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-"Bundle 'git://github.com/vim-scripts/YankRing.vim.git'
 Bundle 'vim-scripts/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/command-t'
@@ -146,22 +140,6 @@ noremap <Leader>_Bs :BufExplorerHorizontalSplit<CR>
 noremap <Leader>_Bv :BufExplorerVerticalSplit<CR>
 
 
-" Mini BufExplorer
-map <Leader>e :MBEFocus<cr>
-map <Leader>m :MBEToggle<cr>
-let g:miniBufExplorerAutoStart = 0
-let g:miniBufExplBRSplit = 0
-let g:miniBufExplShowBufNumbers = 0
-"hi link MBENormal Identifier
-hi link MBEChanged WarningMsg
-hi link MBEVisibleNormal airline_x
-hi link MBEVisibleChanged airline_x_red
-"hi MBEVisibleNormal term=bold,underline cterm=bold,underline ctermfg=10
-"hi MBEVisibleChanged term=bold,underline cterm=bold,underline ctermfg=9
-hi link MBEVisibleActiveNormal airline_b
-hi link MBEVisibleActiveChanged airline_warning
-
-
 " Airline config
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set laststatus=2
@@ -193,18 +171,6 @@ let g:CommandTMaxFiles = 100000
 
 " Taglist config
 let Tlist_Show_One_File = 1
-
-
-" EasyGrep
-set grepprg=grep\ -n\ -P
-let g:EasyGrepMode=3
-let g:EasyGrepCommand=1
-let g:EasyGrepRecursive=1
-" let g:EasyGrepIgnoreCase=1
-let g:EasyGrepDefaultUserPattern='*.cpp *.hpp *.cxx *.hxx *.cc *.hh *.c++ *.inl Makefile *.tup'
-let g:EasyGrepFilesToExclude='build/*'
-let g:EasyGrepOpenWindowOnMatch=1
-let g:EasyGrepJumpToMatch=0
 
 
 " In case of vimdiff, use a different colorscheme
@@ -270,25 +236,14 @@ let g:UltiSnipsListSnippets="<c-e>"
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+
 " ConqueGdb
 let g:ConqueGdb_Leader = '<Leader>g'
-
-
-" Lusty Juggler
-let g:LustyJugglerAltTabMode = 1
-noremap <silent> <C-E> :LustyJuggler<CR>
 
 
 " vim-session
 :let g:session_autosave = 'no'
 :let g:session_autoload = 'no'
-
-
-" YankRing
-" Note: Repeating paste with . is not possible with yankrink :(
-"let g:yankring_min_element_length = 2
-"let g:yankring_max_element_length = 4194304 " 4M
-"nnoremap <silent> <Leader>p :YRShow<CR>
 
 
 " a.vim
@@ -335,20 +290,9 @@ nmap cp :let @" = expand("%:p")<cr>
 " Automatically fix whitspace errors in case of C++ files.
 "autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
 map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
-
-
-" TMUX compatiblity for
-" keys combined with modifiers such as Shift, Control, and Alt.
-" See http://www.reddit.com/r/vim/comments/1a29vk/_/c8tze8p
-if &term =~ '^screen'
-  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
-  execute "set t_kP=\e[5;*~"
-  execute "set t_kN=\e[6;*~"
-
-  " Arrow keys http://unix.stackexchange.com/a/34723
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
-endif
+" Set the <C-p> and <C-n> chords to go backward and forward through our command history.
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+" Extra leader key
+map <Space> <Leader>
 
