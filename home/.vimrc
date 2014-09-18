@@ -45,6 +45,8 @@ set wildmode=longest,list
 set history=500
 " Mute bell
 "set vb t_vb=
+" Match if-endif like pairs, not just parens
+runtime macros/matchit.vim
 
 
 " Solarized colorscheme
