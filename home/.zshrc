@@ -236,4 +236,6 @@ bindkey -M vicmd "^[" nothing
 # Report CPU usage for commands running longer than 10 seconds
 REPORTTIME=10
 
+# even when the shell has exited background jobs will be left alone
+setopt NO_HUP
 
