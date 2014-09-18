@@ -60,6 +60,7 @@ let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
 
+
 if $VIMIDE != "ide"
   let g:loaded_youcompleteme = 1
 else
@@ -67,7 +68,14 @@ else
   set wildignore+=*.o
   set wildignore+=*build*
   "set wildignore+=*test*
+
+  let MYMAKE=expand("./mymake")
+  if filereadable(MYMAKE)
+    echo "MYMAKE"
+    set makeprg=./mymake
+  endif
 endif
+
 
 " Vundle stuff
 filetype off " required!
