@@ -133,9 +133,6 @@ execute pathogen#infect('bundle_pathogen/{}')
 autocmd BufEnter * silent! checktime
 autocmd CursorHold * silent! checktime
 autocmd CursorHoldI * silent! checktime
-" Automatically fix whitspace errors in case of C++ files.
-"autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
-map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
 " Automatically open quickfix window after e.g. :vimgrep
 autocmd QuickFixCmdPost [^l]* nested cwindow
 
@@ -335,6 +332,9 @@ set pastetoggle=<Leader>P
 nnoremap gV `[v`]
 " Put full path on the default register
 nmap cp :let @" = expand("%:p")<cr>
+" Automatically fix whitspace errors in case of C++ files.
+"autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
+map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
 
 
 " TMUX compatiblity for
