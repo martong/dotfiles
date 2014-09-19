@@ -82,6 +82,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-pathogen'
 Bundle 'SirVer/ultisnips'
@@ -138,6 +139,22 @@ autocmd CursorHold * silent! checktime
 autocmd CursorHoldI * silent! checktime
 " Automatically open quickfix window after e.g. :vimgrep
 autocmd QuickFixCmdPost [^l]* nested cwindow
+
+
+" Tex
+" http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
+let g:Tex_SmartKeyBS = 0
+let g:Tex_SmartKeyQuote = 0
+let g:Tex_SmartKeyDot = 0
+let g:Imap_UsePlaceHolders = 0
+let g:Tex_Leader = '`tex'
+let g:Tex_Leader2 = ',tex'
+
+let g:tex_flavor='latex'
+let g:Tex_TreatMacViewerAsUNIX = 1
+let g:Tex_ExecuteUNIXViewerInForeground = 1
+let g:Tex_ViewRule_ps = 'open -a Preview'
+let g:Tex_ViewRule_pdf = 'open -a Preview'
 
 
 " BufExplorer
