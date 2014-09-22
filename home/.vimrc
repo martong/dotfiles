@@ -315,9 +315,30 @@ set pastetoggle=<Leader>P
 nnoremap gV `[v`]
 " Put full path on the default register
 nmap cp :let @" = expand("%:p")<cr>
-" Automatically fix whitspace errors in case of C++ files.
-"autocmd BufWritePost *.hpp,*.cpp :FixWhitespace
-map <Leader>s :autocmd BufWritePost * :FixWhitespace<cr>
+
+" Set up automatical fix whitspace errors in case of C++ files.
+function! ToggleStripWhitespaceOnSaveAndDisplay()
+    echon "StripWhitespace on save "
+    ToggleStripWhitespaceOnSave
+    if (g:strip_whitespace_on_save)
+        echon "ON"
+    else
+        echon "OFF"
+    endif
+endfunction
+map <Leader>s :call ToggleStripWhitespaceOnSaveAndDisplay()<cr>
+function! ToggleWhitespaceAndDisplay()
+    echon "Whitespace highlighting "
+    ToggleWhitespace
+    if (g:better_whitespace_enabled)
+        echon "ON"
+    else
+        echon "OFF"
+    endif
+endfunction
+" unimpaired like toggling
+map cows :call ToggleWhitespaceAndDisplay()<cr>
+
 " Set the <C-p> and <C-n> chords to go backward and forward through our command history.
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
