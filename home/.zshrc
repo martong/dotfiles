@@ -174,6 +174,23 @@ bindkey -M vicmd 'g~' vi-oper-swap-case
 # opp.zsh ~ is not vim-conform
 bindkey -M vicmd '~' vi-swap-case
 
+function vi-backward-word-end {
+  vi-backward-word
+  vi-backward-word
+  vi-backward-char
+  vi-forward-word-end
+}
+zle -N vi-backward-word-end
+bindkey -M vicmd 'ge' vi-backward-word-end
+
+function vi-backward-blank-word-end {
+  vi-backward-blank-word
+  vi-backward-blank-word
+  vi-forward-blank-word-end
+}
+zle -N vi-backward-blank-word-end
+bindkey -M vicmd 'gE' vi-backward-blank-word-end
+
 # Enabling vim text-objects (ciw and alike) for vi-mode
 #source ~/.opp.zsh/opp.zsh
 
