@@ -322,20 +322,11 @@ map cows :call ToggleWhitespaceAndDisplay()<cr>
 
 
 " Custom mappings
-" Moving lines up and down
-"map <A-Down> :m .+1<CR>==
-"map <A-Up> :m .-2<CR>==
 " delete without yanking
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-" change editor mode
-inoremap jj <Esc>
-map <C-S> <PageUp>
 map <Leader>3 :vertical resize 30<cr>
 map <Leader>8 :vertical resize 89<cr>
-map <Leader>w :set wrap!<cr>
-map <Leader>h :set hlsearch!<cr>
-set pastetoggle=<Leader>P
 " Select pasted text
 nnoremap gV `[v`]
 " Put full path on the default register
