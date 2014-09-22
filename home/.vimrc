@@ -121,10 +121,10 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/command-t'
 
-Bundle 'rhysd/vim-clang-format'
 " clang-format dependencies
-Bundle 'kana/vim-operator-user'
-Bundle 'Shougo/vimproc.vim'
+"Bundle 'kana/vim-operator-user'
+"Bundle 'Shougo/vimproc.vim'
+"Bundle 'rhysd/vim-clang-format'
 
 filetype plugin indent on " required!
 
@@ -275,16 +275,29 @@ let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src
 
 
 " clang-format
-let g:clang_format#style_options = {
-  \ "AccessModifierOffset" : -4,
-  \ "AllowShortIfStatementsOnASingleLine" : "true",
-  \ "AllowShortLoopsOnASingleLine" : "true",
-  \ "AlwaysBreakTemplateDeclarations" : "true",
-  \ "Standard" : "Auto",
-  \ "TabWidth" : 4,
-  \ "UseTab" : "Always"}
-let g:clang_format#code_style = 'google'
-let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
+"let g:clang_format#style_options = {
+  "\ "AccessModifierOffset" : -4,
+  "\ "AllowShortIfStatementsOnASingleLine" : "true",
+  "\ "AllowShortLoopsOnASingleLine" : "true",
+  "\ "AlwaysBreakTemplateDeclarations" : "true",
+  "\ "Standard" : "Auto",
+  "\ "TabWidth" : 4,
+  "\ "IndentCaseLabels" : "true",
+  "\ "UseTab" : "Always"}
+"let g:clang_format#code_style = 'google'
+"let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darwin10.9/bin/clang-format'
+" Explicitly adding mark 'c' because clangformat blows up the position.
+"nnoremap <Leader>cf :execute 'normal mc' <bar> ClangFormat<cr>
+"function! ClangFormatWithMark()
+    "call setpos("'c", getpos("'<"))
+    "let openVis = getpos("'<")
+    "let closeVis = getpos("'>")
+    "execute "'<,'>ClangFormat"
+    "call setpos("'<", openVis)
+    "call setpos("'>", closeVis)
+"endfunction
+"vnoremap <Leader>cf <esc>:call ClangFormatWithMark()<cr>
+map <Leader>cf :pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
 
 
 " rtags
