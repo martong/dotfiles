@@ -197,10 +197,6 @@ let g:CommandTNeverShowDotFiles = 1
 let g:CommandTMaxFiles = 100000
 
 
-" Taglist config
-let Tlist_Show_One_File = 1
-
-
 " In case of vimdiff, use a different colorscheme
 "if &diff
 "    colorscheme evening
@@ -294,6 +290,10 @@ let g:clang_format#command = '/Users/mg/local/clang+llvm-3.4.2-x86_64-apple-darw
 " rtags
 map \j :call rtags#JumpTo()<CR>
 map \r :call rtags#FindRefs()<CR>
+
+
+" Tagbar
+map <Leader>T :TagbarToggle<CR>
 
 
 " Custom mappings
