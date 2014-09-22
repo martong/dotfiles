@@ -296,27 +296,8 @@ map \r :call rtags#FindRefs()<CR>
 map <Leader>T :TagbarToggle<CR>
 
 
-" Custom mappings
-" Moving lines up and down
-"map <A-Down> :m .+1<CR>==
-"map <A-Up> :m .-2<CR>==
-" delete without yanking
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
-" change editor mode
-inoremap jj <Esc>
-map <C-S> <PageUp>
-map <Leader>3 :vertical resize 30<cr>
-map <Leader>8 :vertical resize 89<cr>
-map <Leader>w :set wrap!<cr>
-map <Leader>h :set hlsearch!<cr>
-set pastetoggle=<Leader>P
-" Select pasted text
-nnoremap gV `[v`]
-" Put full path on the default register
-nmap cp :let @" = expand("%:p")<cr>
-
-" Set up automatical fix whitspace errors in case of C++ files.
+" better-whitespace
+" Set up automatical fix whitspace errors.
 function! ToggleStripWhitespaceOnSaveAndDisplay()
     echon "StripWhitespace on save "
     ToggleStripWhitespaceOnSave
@@ -339,6 +320,26 @@ endfunction
 " unimpaired like toggling
 map cows :call ToggleWhitespaceAndDisplay()<cr>
 
+
+" Custom mappings
+" Moving lines up and down
+"map <A-Down> :m .+1<CR>==
+"map <A-Up> :m .-2<CR>==
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+" change editor mode
+inoremap jj <Esc>
+map <C-S> <PageUp>
+map <Leader>3 :vertical resize 30<cr>
+map <Leader>8 :vertical resize 89<cr>
+map <Leader>w :set wrap!<cr>
+map <Leader>h :set hlsearch!<cr>
+set pastetoggle=<Leader>P
+" Select pasted text
+nnoremap gV `[v`]
+" Put full path on the default register
+nmap cp :let @" = expand("%:p")<cr>
 " Set the <C-p> and <C-n> chords to go backward and forward through our command history.
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
