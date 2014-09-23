@@ -144,6 +144,10 @@ autocmd CursorHoldI * silent! checktime
 autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
+" Ag
+map <Leader>a :LAg! "\b<C-R><C-W>\b"<cr>
+
+
 " Tex
 " http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
 let g:Tex_SmartKeyBS = 0
