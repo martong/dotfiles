@@ -31,7 +31,7 @@ set hidden
 " Store swap files in fixed location, not current directory.
 "set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 set noswapfile
-set ignorecase
+set smartcase
 set incsearch
 " terminal colors
 set t_Co=256
