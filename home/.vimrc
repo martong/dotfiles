@@ -84,6 +84,7 @@ call vundle#rc()
 
 Bundle 'majutsushi/tagbar'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Bundle 'rking/ag.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-pathogen'
 Bundle 'SirVer/ultisnips'
