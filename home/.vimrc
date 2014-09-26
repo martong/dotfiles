@@ -305,7 +305,8 @@ let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src
     "call setpos("'>", closeVis)
 "endfunction
 "vnoremap <Leader>cf <esc>:call ClangFormatWithMark()<cr>
-map <Leader>cf :pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
+map <Leader>cf :0,$pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
+vmap <Leader>cf :pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
 
 
 " rtags
