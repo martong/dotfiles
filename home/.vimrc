@@ -74,6 +74,7 @@ else
   if filereadable(MYMAKE)
     echo "MYMAKE"
     set makeprg=./mymake
+    set errorformat+=%m\\,\ file\ %f\\,\ line\ %l%.
   endif
 endif
 
