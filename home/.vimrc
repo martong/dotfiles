@@ -189,6 +189,7 @@ let g:airline#extensions#default#layout = [
       \ [ 'a', 'c', 'b' ],
       \ [ 'x', 'y', 'z', 'warning' ]
       \ ]
+let g:airline#extensions#tagbar#enabled = 0
 
 " NERDTree config
 map <Leader>n :NERDTreeFocus<cr>
