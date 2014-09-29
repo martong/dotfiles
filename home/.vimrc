@@ -320,28 +320,9 @@ map <Leader>T :TagbarToggle<CR>
 
 
 " better-whitespace
-" Set up automatical fix whitspace errors.
-function! ToggleStripWhitespaceOnSaveAndDisplay()
-    echon "StripWhitespace on save "
-    ToggleStripWhitespaceOnSave
-    if (g:strip_whitespace_on_save)
-        echon "ON"
-    else
-        echon "OFF"
-    endif
-endfunction
-map <Leader>s :call ToggleStripWhitespaceOnSaveAndDisplay()<cr>
-function! ToggleWhitespaceAndDisplay()
-    echon "Whitespace highlighting "
-    ToggleWhitespace
-    if (g:better_whitespace_enabled)
-        echon "ON"
-    else
-        echon "OFF"
-    endif
-endfunction
+map <Leader>s :ToggleStripWhitespaceOnSave<cr>
 " unimpaired like toggling
-map cows :call ToggleWhitespaceAndDisplay()<cr>
+map cows :ToggleWhitespace<cr>
 
 
 " Custom mappings
