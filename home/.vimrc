@@ -204,6 +204,9 @@ let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
 " CommandT config
 let g:CommandTNeverShowDotFiles = 1
 let g:CommandTMaxFiles = 100000
+let g:CommandTMaxHeight = 10
+let g:CommandTMatchWindowReverse = 1
+"let g:CommandTMatchWindowAtTop = 1
 
 
 " In case of vimdiff, use a different colorscheme
