@@ -84,6 +84,9 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'Peeja/vim-cdo'
+Bundle 'henrik/vim-qargs'
+Bundle 'tpope/vim-abolish'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'majutsushi/tagbar'
 Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
