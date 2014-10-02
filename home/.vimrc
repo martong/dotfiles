@@ -151,7 +151,7 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
 " Ag
-map <Leader>a :LAg! "\b<C-R><C-W>\b"<cr>
+map <Leader>a :let @/="<C-R><C-W>" \| LAg! "\b<C-R><C-W>\b"<cr>
 
 
 " Tex
