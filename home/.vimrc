@@ -48,6 +48,7 @@ set history=500
 "set vb t_vb=
 " Match if-endif like pairs, not just parens
 runtime macros/matchit.vim
+highlight Cursor guifg=black guibg=white
 
 
 " Solarized colorscheme
