@@ -319,6 +319,7 @@ vmap <Leader>cf :pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/c
 " rtags
 map \j :call rtags#JumpTo()<CR>
 map \r :call rtags#FindRefs()<CR>
+noremap <Leader>J :call rtags#FindSymbolsOfWordUnderCursor()<CR>
 
 
 " Tagbar
