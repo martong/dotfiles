@@ -79,6 +79,9 @@ else
     set makeprg=./mymake
     set errorformat+=%m\\,\ file\ %f\\,\ line\ %l%.
   endif
+
+  let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
+  let &titlestring=DIRNAME
 endif
 
 
