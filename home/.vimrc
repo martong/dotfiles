@@ -290,6 +290,7 @@ let g:ConqueGdb_Leader = '<Leader>g'
 
 " a.vim
 let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
+map <Leader>A :A<cr>
 
 
 " clang-format
