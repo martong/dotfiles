@@ -27,3 +27,5 @@ set guioptions-=r
 " Airline config
 let g:airline_powerline_fonts = 1
 set guifont=Inconsolata\ for\ Powerline:h13
+highlight Cursor guifg=black guibg=white
+
