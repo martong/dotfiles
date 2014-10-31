@@ -76,7 +76,7 @@ else
 
   let MYMAKE=expand("./mymake")
   if filereadable(MYMAKE)
-    echo "MYMAKE"
+    "echo "MYMAKE"
     set makeprg=./mymake
     set errorformat+=%m\\,\ file\ %f\\,\ line\ %l%.
   endif
