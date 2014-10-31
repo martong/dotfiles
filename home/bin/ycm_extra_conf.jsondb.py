@@ -195,17 +195,33 @@ def FlagsForFile( filename, **kwargs ):
       compilation_info.compiler_flags_,
       compilation_info.compiler_working_dir_ )
 
-    # NOTE: This is just for YouCompleteMe; it's highly likely that your project
-    # does NOT need to remove the stdlib flag. DO NOT USE THIS IN YOUR
-    # ycm_extra_conf IF YOU'RE NOT 100% SURE YOU NEED IT.
     try:
+
+      # Xcode 5.1
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1')
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include')
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include')
+
       #final_flags.remove( '-stdlib=libc++' )
+      #final_flags.append( '-nostdinc++' )
+
+      # Xcode 6
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1')
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include')
+      #final_flags.append('-isystem')
+      #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include')
+
+      #binary distribution of LLVM+Clang
       final_flags.append('-isystem')
-      final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1')
+      final_flags.append('/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../include/c++/v1')
       final_flags.append('-isystem')
-      final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include')
-      final_flags.append('-isystem')
-      final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include')
+      final_flags.append('/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../lib/clang/3.5.0/include')
+
       final_flags.append('-isystem')
       final_flags.append('/usr/include')
       final_flags.append('-isystem')
