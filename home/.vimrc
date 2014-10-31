@@ -320,8 +320,8 @@ map <Leader>A :A<cr>
     "call setpos("'>", closeVis)
 "endfunction
 "vnoremap <Leader>cf <esc>:call ClangFormatWithMark()<cr>
-map <Leader>cf :0,$pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
-vmap <Leader>cf :pyf /Users/mg/reflect/git/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
+map <Leader>cf :0,$pyf /Users/mg/local/clang-format.py<CR>
+vmap <Leader>cf :pyf /Users/mg/local/clang-format.py<CR>
 
 
 " rtags
