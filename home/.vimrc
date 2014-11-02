@@ -78,6 +78,7 @@ else
   if filereadable(MYMAKE)
     "echo "MYMAKE"
     set makeprg=./mymake
+    " Match the assertion errors (in gtest)
     set errorformat+=%m\\,\ file\ %f\\,\ line\ %l%.
   endif
 
@@ -91,6 +92,9 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'file:///Users/mg/WORK/git/vim-compiledb-path'
+Bundle 'ciaranm/detectindent'
+Bundle 'tpope/vim-repeat'
 Bundle 'Peeja/vim-cdo'
 Bundle 'henrik/vim-qargs'
 Bundle 'tpope/vim-abolish'
