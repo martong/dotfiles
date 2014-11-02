@@ -216,7 +216,7 @@ def FlagsForFile( filename, **kwargs ):
       #final_flags.append('-isystem')
       #final_flags.append('/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.0/include')
 
-      # libc
+      # compiler-rt (e.g. string.h)
       final_flags.append('-isystem')
       final_flags.append('/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include')
 

@@ -24,8 +24,9 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x', 'c++',
 
-#system search header
+# compiler-rt (e.g. string.h)
 '-isystem', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include',
+
 '-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../include/c++/v1',
 '-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../lib/clang/3.5.0/include'
 '-isystem', '/usr/include',
