@@ -198,6 +198,7 @@ HISTSIZE=30000
 SAVEHIST=30000
 
 source ~/.common_zsh_bash.rc
+source ~/.last-command.zsh
 
 # Simpulate the delete key I got used to
 real-delete-char()
