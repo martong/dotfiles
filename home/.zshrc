@@ -157,7 +157,7 @@ bindkey -M viins '^Xt' tmux-pane-words-prefix
 bindkey -M viins '^X^X' tmux-pane-words-anywhere
 
 bindkey '^Xr' newest-files
-bindkey -M viins '^Xr' newest-files
+bindkey -M viins '^X^r' newest-files
 
 bindkey -M vicmd 'K' only-local-history-up
 bindkey -M vicmd 'J' only-local-history-down
