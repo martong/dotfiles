@@ -53,6 +53,8 @@ set history=500
 runtime macros/matchit.vim
 highlight Cursor guifg=black guibg=white
 
+set autoread
+
 
 " Solarized colorscheme
 " http://stackoverflow.com/questions/12774141/strange-changing-background-color-in-vim-solarized
