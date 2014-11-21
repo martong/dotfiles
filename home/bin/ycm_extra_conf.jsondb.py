@@ -220,11 +220,11 @@ def FlagsForFile( filename, **kwargs ):
       final_flags.append('-isystem')
       final_flags.append('/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include')
 
-      #binary distribution of LLVM+Clang
-      #final_flags.append('-isystem')
-      #final_flags.append('/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../include/c++/v1')
-      #final_flags.append('-isystem')
-      #final_flags.append('/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../lib/clang/3.5.0/include')
+      # llvm+clang from source
+      final_flags.append('-isystem')
+      final_flags.append('/Users/mg/local/clang_src/llvm_installed/bin/../include/c++/v1')
+      final_flags.append('-isystem')
+      final_flags.append('/Users/mg/local/clang_src/llvm_installed/bin/../lib/clang/3.6.0/include')
 
       final_flags.append('-isystem')
       final_flags.append('/usr/include')

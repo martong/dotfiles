@@ -32,6 +32,8 @@ flags = [
 '-isystem', '/usr/include',
 '-isystem', '/usr/local/include',
 '-isystem', '/Users/mg/archives/boost_1_56_0',
+'-isystem', '/Users/mg/local/gmock/gtest/include',
+'-isystem', '/Users/mg/local/gmock/include'
 
 ]
  
