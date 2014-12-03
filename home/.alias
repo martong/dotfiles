@@ -39,3 +39,5 @@ alias .....='cd ../../../../'
 
 # mac find
 alias mf='mdfind -onlyin . '
+alias f='find . -iname '
+
