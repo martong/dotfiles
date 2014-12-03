@@ -94,6 +94,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'martong/vim-visual-star-ag'
 Bundle 'file:///Users/mg/WORK/git/vim-compiledb-path'
 Bundle 'ciaranm/detectindent'
 Bundle 'tpope/vim-repeat'
