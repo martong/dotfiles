@@ -9,7 +9,7 @@ nnoremap <D-p> <C-w>p
 
 nnoremap <D-d> :Bdelete<CR>
 nnoremap <D-e> :e#<CR>
-nnoremap <D-b> :make!<CR>
+nnoremap <D-b> :wa<CR>:make!<CR>
 
 set macmeta
 nnoremap <M-h> gT
