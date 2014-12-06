@@ -1,5 +1,6 @@
 #!/bin/sh
 cd build/osx_x64_debug/make
+target=prezi-viewer-unittest
 # Use ':' instead of '|' in gtest filter
-make -j8 && ./prezi-viewer-unittest --gtest_color=no --gtest_filter="*ZEntity*:*Component*"
+make ${target} -j8 && ./${target} --gtest_color=no --gtest_filter="*ZEntity*:*Component*"
 
