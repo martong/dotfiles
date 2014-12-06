@@ -94,6 +94,8 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'JazzCore/ctrlp-cmatcher'
+Bundle 'kien/ctrlp.vim'
 Bundle 'martong/vim-visual-star-ag'
 Bundle 'file:///Users/mg/WORK/git/vim-compiledb-path'
 Bundle 'ciaranm/detectindent'
@@ -165,7 +167,9 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
 " Ag
-map <Leader>a :let @/="<C-R><C-W>" \| LAg! "\b<C-R><C-W>\b"<cr>
+map <Leader>a :let @/="<C-R><C-W>" \| LAg! --cpp "\b<C-R><C-W>\b"<cr>
+map <Leader>s :let @/="<C-R><C-W>" \| LAg! --cpp --skip-vcs-ignores "\b<C-R><C-W>\b"<cr>
+map <Leader>A :let @/="<C-R><C-W>" \| LAg! --skip-vcs-ignores "\b<C-R><C-W>\b"<cr>
 
 
 " Tex
@@ -301,7 +305,7 @@ let g:ConqueGdb_Leader = '<Leader>g'
 
 " a.vim
 let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
-map <Leader>A :A<cr>
+"map <Leader>A :A<cr>
 
 
 " clang-format
@@ -342,9 +346,25 @@ map <Leader>T :TagbarToggle<CR>
 
 
 " better-whitespace
-map <Leader>s :ToggleStripWhitespaceOnSave<cr>
+"map <Leader>s :ToggleStripWhitespaceOnSave<cr>
 " unimpaired like toggling
-map cows :ToggleWhitespace<cr>
+"map cows :ToggleWhitespace<cr>
+
+
+" CtrlP
+let g:ctrlp_cmd = 'CtrlP `pwd`'
+let g:ctrlp_by_filename = 1
+let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
+            \ --skip-vcs-ignores
+            \ --ignore "*.o"
+            \ --ignore "*.a"
+            \ --ignore "*.png"
+            \ --ignore "*.jpg"
+            \ -g ""'
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+nnoremap <Leader>t :CtrlP<cr>
+nnoremap <Leader>b :CtrlPBuffer<cr>
+nnoremap <Leader>C :CtrlPChangeAll<cr>
 
 
 " Custom mappings
