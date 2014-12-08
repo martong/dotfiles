@@ -348,16 +348,17 @@ map <Leader>T :TagbarToggle<CR>
 " CtrlP
 let g:ctrlp_cmd = 'CtrlP `pwd`'
 let g:ctrlp_by_filename = 1
+"let g:ctrlp_follow_symlinks = 2
 let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
             \ --skip-vcs-ignores
             \ --ignore "*.o"
             \ --ignore "*.a"
             \ --ignore "*.png"
             \ --ignore "*.jpg"
-            \ -g ""'
+            \ -f -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-nnoremap <Leader>t :CtrlP<cr>
-nnoremap <Leader>o :CtrlP<cr>
+nnoremap <Leader>t :CtrlP `pwd`<cr>
+nnoremap <Leader>o :CtrlP `pwd`<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>C :CtrlPChangeAll<cr>
 
