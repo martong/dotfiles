@@ -355,7 +355,9 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
             \ --ignore "*.a"
             \ --ignore "*.png"
             \ --ignore "*.jpg"
-            \ -f -g ""'
+            \ --ignore "boostLibs"
+            \ --ignore "glm"
+            \ -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CtrlP `pwd`<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
