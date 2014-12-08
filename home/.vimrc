@@ -357,6 +357,7 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
             \ -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CtrlP<cr>
+nnoremap <Leader>o :CtrlP<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>C :CtrlPChangeAll<cr>
 
