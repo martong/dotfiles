@@ -361,6 +361,7 @@ nnoremap <Leader>t :CtrlP `pwd`<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>C :CtrlPChangeAll<cr>
+map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
 " Custom mappings
