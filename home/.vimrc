@@ -99,7 +99,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'martong/vim-visual-star-ag'
 Bundle 'file:///Users/mg/WORK/git/vim-compiledb-path'
 Bundle 'ciaranm/detectindent'
