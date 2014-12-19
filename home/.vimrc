@@ -211,6 +211,7 @@ let g:airline#extensions#default#layout = [
       \ ]
 let g:airline#extensions#tagbar#enabled = 0
 
+
 " NERDTree config
 map <Leader>n :NERDTreeFocus<cr>
 map <Leader>f :NERDTreeFind<cr>
@@ -261,6 +262,7 @@ let g:ycm_auto_trigger = 0
 map gd :YcmCompleter GoTo<CR>
 map <Leader>Y :YcmDiags<cr>
 map <Leader>y :YcmForceCompileAndDiagnostics<cr>
+
 
 " UltiSnips config
 "let g:UltiSnipsExpandTrigger = '<c-l>'
