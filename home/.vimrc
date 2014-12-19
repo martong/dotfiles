@@ -54,6 +54,7 @@ runtime macros/matchit.vim
 highlight Cursor guifg=black guibg=white
 
 set autoread
+set mouse=a
 
 
 " Solarized colorscheme
