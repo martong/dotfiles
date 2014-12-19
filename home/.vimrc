@@ -89,6 +89,10 @@ else
 endif
 
 
+" Tagbar
+let g:tagbar_ctags_bin = '/Users/mg/archives/ctags-code/ctags'
+
+
 " Vundle stuff
 filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
