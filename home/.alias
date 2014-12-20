@@ -10,8 +10,8 @@ hash -d g=$HOME/WORK/git
 #VIMDIR=/usr/local/Cellar/macvim/7.4-73/bin/
 vim_=`which gvim`
 VIMDIR=`dirname $vim_`
-alias gvimide='VIMIDE=ide $VIMDIR/gvim'
-alias vimide='VIMIDE=ide $VIMDIR/mvim -v'
+alias gvimide='VIMIDE=ide $VIMDIR/vim -g'
+alias vimide='VIMIDE=ide $VIMDIR/vim -v'
 alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
 
 #

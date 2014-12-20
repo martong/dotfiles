@@ -4,6 +4,7 @@
 export PATH=/Users/mg/archives/rtags_build5/bin:$PATH
 export PATH=/usr/local/opt/ccache/libexec:$PATH
 export CCACHE_CPP2=yes
+export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 
 umask 002
 

@@ -55,6 +55,8 @@ highlight Cursor guifg=black guibg=white
 
 set autoread
 set mouse=a
+set breakindent
+set showbreak=↪
 
 
 " Solarized colorscheme
@@ -388,4 +390,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " Extra leader key
 map <Space> <Leader>
+" Do not enter Ex mode
+" http://www.bestofvim.com/tip/leave-ex-mode-good/
+nnoremap Q <nop>
 
