@@ -55,8 +55,12 @@ highlight Cursor guifg=black guibg=white
 
 set autoread
 set mouse=a
+" Indent linebreaks
 set breakindent
 set showbreak=↪
+set breakat-=-
+set breakat-=*
+set breakat+=()
 
 
 " Solarized colorscheme
