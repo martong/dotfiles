@@ -5,6 +5,7 @@ export PATH=/Users/mg/archives/rtags_build5/bin:$PATH
 export PATH=/usr/local/opt/ccache/libexec:$PATH
 export CCACHE_CPP2=yes
 export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+export PYTHONPATH=$PYTHONPATH:/Users/mg/bin/ycm_extra_conf.jsondb/
 
 umask 002
 
