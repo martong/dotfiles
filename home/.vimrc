@@ -147,7 +147,7 @@ Bundle 'xolox/vim-misc'
 " automatically reloads various types of Vim scripts as you're editing them
 Bundle 'xolox/vim-reload'
 Bundle 'xolox/vim-session'
-Bundle 'airblade/vim-gitgutter'
+"Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
