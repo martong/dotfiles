@@ -233,6 +233,8 @@ let g:CommandTNeverShowDotFiles = 1
 let g:CommandTMaxFiles = 100000
 let g:CommandTMaxHeight = 10
 let g:CommandTMatchWindowReverse = 1
+let g:CommandTTraverseSCM = "pwd"
+let g:CommandTFileScanner = "watchman"
 "let g:CommandTMatchWindowAtTop = 1
 
 
@@ -373,7 +375,7 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
             \ --ignore "glm"
             \ -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-nnoremap <Leader>t :CtrlP `pwd`<cr>
+nnoremap <Leader>t :CommandT<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>C :CtrlPChangeAll<cr>
