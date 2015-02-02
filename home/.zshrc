@@ -218,20 +218,29 @@ key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
+# This is not working os OSX 10.9 and 10.10
+#key[Up]=${terminfo[kcuu1]}
+#key[Down]=${terminfo[kcud1]}
 # vi cmd mode
 [[ -n "${key[Home]}"     ]]  && bindkey -M vicmd  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M vicmd  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M vicmd  "${key[Insert]}"   vi-insert
 [[ -n "${key[Delete]}"   ]]  && bindkey -M vicmd  "${key[Delete]}"   real-delete-char
-[[ -n "${key[PageUp]}"   ]]  && bindkey -M vicmd  "${key[PageUp]}"   only-local-history-up
-[[ -n "${key[PageDown]}" ]]  && bindkey -M vicmd  "${key[PageDown]}" only-local-history-down
+#[[ -n "${key[PageUp]}"   ]]  && bindkey -M vicmd  "${key[PageUp]}"   only-local-history-up
+#[[ -n "${key[PageDown]}" ]]  && bindkey -M vicmd  "${key[PageDown]}" only-local-history-down
 # vi insert mode
 [[ -n "${key[Home]}"     ]]  && bindkey -M viins  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey -M viins  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey -M viins  "${key[Insert]}"   vi-insert
 [[ -n "${key[Delete]}"   ]]  && bindkey -M viins  "${key[Delete]}"   real-delete-char
+#[[ -n "${key[Up]}"       ]]  && bindkey -M viins  "${key[Up]}"       history-substring-search-up
+#[[ -n "${key[Down]}"     ]]  && bindkey -M viins  "${key[Down]}"     history-substring-search-down
 [[ -n "${key[PageUp]}"   ]]  && bindkey -M viins  "${key[PageUp]}"   only-local-history-up
 [[ -n "${key[PageDown]}" ]]  && bindkey -M viins  "${key[PageDown]}" only-local-history-down
+
+# OSX specific
+[[ -n "^[[A"     ]]  && bindkey -M viins  "^[[A"     history-substring-search-up
+[[ -n "^[[B"     ]]  && bindkey -M viins  "^[[B"     history-substring-search-down
 
 # After entering insert mode because of hitting a or A,
 # I can't backspace past the point where I entered insert mode.
