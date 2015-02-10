@@ -240,3 +240,7 @@ REPORTTIME=10
 # even when the shell has exited background jobs will be left alone
 setopt NO_HUP
 
+# Non-alphanumeric chars treated as part of a word except '/'
+# So C-W behaves like in bash.
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
