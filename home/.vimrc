@@ -197,11 +197,13 @@ let g:Tex_ViewRule_pdf = 'open -a Preview'
 
 " BufExplorer
 noremap <Leader>v :BufExplorer<CR>
+let g:bufExplorerFindActive=0
+let g:bufExplorerDisableDefaultKeyMapping=1
 " nunmap somehow is not working
 "nunmap <Leader>bs
 "nunmap <Leader>bv
-noremap <Leader>_Bs :BufExplorerHorizontalSplit<CR>
-noremap <Leader>_Bv :BufExplorerVerticalSplit<CR>
+"noremap <Leader>_Bs :BufExplorerHorizontalSplit<CR>
+"noremap <Leader>_Bv :BufExplorerVerticalSplit<CR>
 
 
 " Airline config
