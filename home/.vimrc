@@ -324,7 +324,13 @@ let g:ConqueGdb_Leader = '<Leader>g'
 " a.vim
 let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
 let g:alternateNoDefaultAlternate = 1
-map <Leader>a :A<cr>
+" For some reason :A does not update the buffer list, if the alternate file
+" is not opened in any buffer. Therefore <C-O><C-I> will manipulate the
+" jumplist, and that manipulation will put the buffer in the list.
+" Also we add the current position to the jumplist, so
+" the above trick will not fuck up the current position when there is no
+" alternate file.
+map <Leader>a :normal m'<cr>:A<cr><C-O><C-I>
 
 
 " clang-format
@@ -409,4 +415,5 @@ map <Space> <Leader>
 " Do not enter Ex mode
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
+
 
