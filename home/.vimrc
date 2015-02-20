@@ -93,6 +93,9 @@ else
 
   let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
   let &titlestring=DIRNAME
+
+  "http://stackoverflow.com/questions/6821033/vim-how-to-run-a-command-immediately-when-starting-vim
+  autocmd VimEnter * CompileDbPathIfExists build/osx_x64_debug/ninja/compile_commands.json
 endif
 
 
@@ -109,7 +112,7 @@ Bundle 'bogado/file-line'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'martong/vim-visual-star-ag'
-Bundle 'file:///Users/mg/WORK/git/vim-compiledb-path'
+Bundle 'martong/vim-compiledb-path'
 Bundle 'ciaranm/detectindent'
 Bundle 'tpope/vim-repeat'
 Bundle 'Peeja/vim-cdo'
