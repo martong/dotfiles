@@ -266,6 +266,7 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
 let g:ycm_auto_trigger = 0
+let g:ycm_max_diagnostics_to_display = 1000
 "let g:ycm_semantic_triggers =  {
 "  \   'c' : ['->', '.'],
 "  \   'objc' : ['->', '.'],
@@ -276,6 +277,7 @@ let g:ycm_auto_trigger = 0
 "  \   'erlang' : [':'],
 "  \ }
 map gd :YcmCompleter GoTo<CR>
+map gi :YcmCompleter GoToImprecise<CR>
 map <Leader>Y :YcmDiags<cr>
 map <Leader>y :YcmForceCompileAndDiagnostics<cr>
 
