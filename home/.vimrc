@@ -108,6 +108,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'justinmk/vim-sneak'
 Bundle 'bogado/file-line'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -129,7 +130,8 @@ Bundle 'tpope/vim-unimpaired'
 "Bundle 'gilligan/vim-lldb'
 "Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
 "Bundle 'file:///Users/mg/tmp/vim-lldb', {'rtp': 'utils/vim-lldb'}
-Bundle 'vim-scripts/Conque-GDB'
+"Bundle 'vim-scripts/Conque-GDB'
+Bundle 'martong/conque-term'
 Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-sleuth'
