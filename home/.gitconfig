@@ -21,3 +21,5 @@
 [core]
 	excludesfile = /Users/mg/.gitignore
 	pager = less -x1,5
+[push]
+	default = simple
