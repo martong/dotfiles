@@ -1,0 +1,10 @@
+#!/bin/bash
+#echo "$@" >> ~/tmp/iterm_vim.log
+VIM=/Applications/MacVim.app/Contents/MacOS/vim
+#if [ -z "$VIMSERV" ]; then VIMSERV=vim; fi
+VIMSERV=friend
+# Change focus as well
+#$VIM --servername $VIMSERV --remote "$@"
+# Do not change focus
+$VIM --servername $VIMSERV --remote-send "<ESC>:e $@<CR>"
+
