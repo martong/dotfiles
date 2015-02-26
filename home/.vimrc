@@ -158,7 +158,7 @@ Bundle 'xolox/vim-session'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-jp/cpp-vim'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'vim-scripts/a.vim'
+Bundle 'martong/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/command-t'
 
