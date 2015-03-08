@@ -400,6 +400,11 @@ nnoremap <Leader>b :CtrlPBuffer<cr>
 map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
+" Ag
+" Shortcut for search in cpp files
+command! -nargs=1 F LAg! --cpp <q-args>
+
+
 " Custom mappings
 " delete without yanking
 nnoremap <leader>d "_d
