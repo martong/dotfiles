@@ -108,6 +108,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Bundle 'bbchung/clighter'
 Bundle 'justinmk/vim-sneak'
 Bundle 'bogado/file-line'
 Bundle 'JazzCore/ctrlp-cmatcher'
@@ -403,6 +404,10 @@ map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
 " Ag
 " Shortcut for search in cpp files
 command! -nargs=1 F LAg! --cpp <q-args>
+
+
+" Clighter
+"let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclang.dylib'
 
 
 " Custom mappings
