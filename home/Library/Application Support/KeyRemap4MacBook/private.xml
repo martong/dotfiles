@@ -13,9 +13,15 @@
     <!--<autogen>__KeyToKey__ KeyCode::TAB, KeyCode::SPACE</autogen>-->
   <!--</item>-->
 
+  <appdef>
+    <appname>VIRTUALBOXVM</appname>
+    <equal>org.virtualbox.app.VirtualBoxVM</equal>
+  </appdef>
+
   <item>
-	<name>Section(§) to Backquote(`) only in US layout</name>
+	<name>Section(§) to Backquote(`) only in US layout, not in VirtualBoxVM</name>
 	<identifier>remap.uk_section2backquote.only_in_us_layout</identifier>
+	<not>VIRTUALBOXVM</not>
 	<inputsource_only>US</inputsource_only>
 	<autogen>__KeyToKey__ KeyCode::UK_SECTION, KeyCode::BACKQUOTE</autogen>
   </item>
