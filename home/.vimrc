@@ -108,7 +108,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"Bundle 'bbchung/clighter'
+"Bundle 'jceb/vim-editqf'
 Bundle 'justinmk/vim-sneak'
 Bundle 'bogado/file-line'
 Bundle 'JazzCore/ctrlp-cmatcher'
@@ -148,6 +148,11 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'BufOnly.vim'
 Bundle 'headerguard'
 Bundle 'Valloric/YouCompleteMe'
+"if $VIMIDE == "ide"
+if 0
+  Bundle 'bbchung/clighter'
+  Bundle 'matthiasvegh/ycmlighter'
+endif
 " :Bdelete --> does not close windows, just the buffer.
 Bundle 'moll/vim-bbye'
 " vim-reload, vim-session depends on it
@@ -407,7 +412,15 @@ command! -nargs=1 F LAg! --cpp <q-args>
 
 
 " Clighter
-"let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclang.dylib'
+let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclang.dylib'
+let g:clighter_highlight_groups = ['clighterMacroInstantiation','clighterStructDecl','clighterClassDecl','clighterEnumDecl','clighterEnumConstantDecl','clighterTypeRef','clighterDeclRefExprEnum', 'clighterNamespace']
+hi link clighterNamespace Constant
+hi link clighterStructDecl Identifier
+hi link clighterClassDecl Identifier
+hi link clighterEnumDecl Identifier
+"let g:clighter_cursor_hl_mode=0 " enable fast symbol highlight
+let g:clighter_cursor_hl_default = 0
+map <leader>cl :ClighterToggleCursorHL<cr>
 
 
 " Custom mappings
