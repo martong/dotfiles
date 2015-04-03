@@ -38,6 +38,7 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 # ag find
-alias af='ag -ig '
+alias af='ag -iug '
+alias ff='ag -iug '
 alias f='ag -ig '
 
