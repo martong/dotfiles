@@ -119,6 +119,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "Bundle 'jceb/vim-editqf'
+Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'haya14busa/vim-easyoperator-phrase'
 Bundle 'justinmk/vim-sneak'
 Bundle 'bogado/file-line'
 Bundle 'JazzCore/ctrlp-cmatcher'
@@ -439,6 +441,25 @@ let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclan
 "let g:clighter_occurrences_mode = 1
 "let g:ClighterOccurrences = 1
 map <leader>Cl :ClighterToggleOccurences<cr>
+
+
+" EasyMotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_add_search_history = 0
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+"nmap s <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+"nmap s <Plug>(easymotion-s2)
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+" JK motions: Line motions
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+nmap <Leader>/ <Plug>(easymotion-sn)
 
 
 " Custom mappings
