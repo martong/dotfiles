@@ -376,8 +376,14 @@ map <Leader>a :normal m'<cr>:A<cr><C-O><C-I>
     "call setpos("'>", closeVis)
 "endfunction
 "vnoremap <Leader>cf <esc>:call ClangFormatWithMark()<cr>
-map <Leader>cf :0,$pyf /Users/mg/local/clang-format.py<CR>
-vmap <Leader>cf :pyf /Users/mg/local/clang-format.py<CR>
+
+function! GitClangFormat()
+    write
+    execute "!cd ". expand("%:p:h") . " && git clang-format --force " . expand("%:p")
+endfunction
+nnoremap <Leader>cf :call GitClangFormat()<CR>
+map <Leader>Cf :0,$pyf /Users/mg/local/bin/clang-format.py<CR>
+vmap <Leader>cf :pyf /Users/mg/local/bin/clang-format.py<CR>
 
 
 " rtags
