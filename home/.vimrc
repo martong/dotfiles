@@ -208,6 +208,7 @@ let g:Tex_SmartKeyDot = 0
 let g:Imap_UsePlaceHolders = 0
 let g:Tex_Leader = '`tex'
 let g:Tex_Leader2 = ',tex'
+let g:Imap_FreezeImap=1
 
 let g:tex_flavor='latex'
 let g:Tex_TreatMacViewerAsUNIX = 1
