@@ -161,7 +161,7 @@ Bundle 'Valloric/YouCompleteMe'
 "if $VIMIDE == "ide"
 if 0
   Bundle 'bbchung/clighter'
-  Bundle 'matthiasvegh/ycmlighter'
+  "Bundle 'matthiasvegh/ycmlighter'
 endif
 " :Bdelete --> does not close windows, just the buffer.
 Bundle 'moll/vim-bbye'
@@ -423,14 +423,15 @@ command! -nargs=1 F LAg! --cpp <q-args>
 
 " Clighter
 let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclang.dylib'
-let g:clighter_highlight_groups = ['clighterMacroInstantiation','clighterStructDecl','clighterClassDecl','clighterEnumDecl','clighterEnumConstantDecl','clighterTypeRef','clighterDeclRefExprEnum', 'clighterNamespace']
-hi link clighterNamespace Constant
-hi link clighterStructDecl Identifier
-hi link clighterClassDecl Identifier
-hi link clighterEnumDecl Identifier
+"let g:clighter_highlight_groups = ['clighterMacroInstantiation','clighterStructDecl','clighterClassDecl','clighterEnumDecl','clighterEnumConstantDecl','clighterTypeRef','clighterDeclRefExprEnum', 'clighterNamespace']
+"hi link clighterNamespace Constant
+"hi link clighterStructDecl Identifier
+"hi link clighterClassDecl Identifier
+"hi link clighterEnumDecl Identifier
 "let g:clighter_cursor_hl_mode=0 " enable fast symbol highlight
-let g:clighter_cursor_hl_default = 0
-map <leader>cl :ClighterToggleCursorHL<cr>
+"let g:clighter_occurrences_mode = 1
+"let g:ClighterOccurrences = 1
+map <leader>Cl :ClighterToggleOccurences<cr>
 
 
 " Custom mappings
