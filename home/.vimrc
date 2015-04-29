@@ -89,6 +89,16 @@ else
     set makeprg=./mymake
     " Match the assertion errors (in gtest)
     set errorformat+=%m\\,\ file\ %f\\,\ line\ %l%.
+    " Exclude lines with "runtest.lock" from quickfix list
+    " ^= means prepend
+    " %-G means exclude from quickfix list
+    " %. means regex dot
+    " %# means regex star
+    " References:
+    " http://vimdoc.sourceforge.net/htmldoc/quickfix.html
+    " http://vimdoc.sourceforge.net/htmldoc/quickfix.html#errorformat
+    " http://stackoverflow.com/questions/663585/preventing-make-in-vim-from-going-to-a-warning
+    set efm^=\%-G\%.\%#runtest.lock\%.\%#
   endif
 
   let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
