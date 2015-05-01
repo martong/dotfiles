@@ -238,11 +238,10 @@ let g:airline#extensions#default#section_truncate_width = {
     \ 'x': 60,
     \ 'y': 88,
     \ 'z': 45,
-    \ 'warning': 60
     \ }
 let g:airline#extensions#default#layout = [
       \ [ 'a', 'c', 'b' ],
-      \ [ 'x', 'z', 'warning' ]
+      \ [ 'x', 'z']
       \ ]
 let g:airline#extensions#tagbar#enabled = 0
 
