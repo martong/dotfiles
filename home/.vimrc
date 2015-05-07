@@ -298,8 +298,10 @@ let g:ycm_max_diagnostics_to_display = 1000
 "  \ }
 map gd :YcmCompleter GoTo<CR>
 map gi :YcmCompleter GoToImprecise<CR>
-map <Leader>Y :YcmDiags<cr>
-map <Leader>y :YcmForceCompileAndDiagnostics<cr>
+map <Leader>yY :YcmDiags<cr>
+map <Leader>yy :YcmForceCompileAndDiagnostics<cr>
+map <Leader>ys :YcmShowDetailedDiagnostic<cr>
+map <Leader>yt :YcmCompleter GetType<cr>
 
 
 " UltiSnips config
