@@ -415,7 +415,20 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
 nnoremap <Leader>t :CommandT<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
-map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
+function! SubstituteTest(str)
+  let str2 = a:str
+  " substitute depends on ignorecase
+  " TODO fix that
+  let str2 = substitute(str2, "_test", "", "g")
+  let str3 = substitute(str2, "Test", "", "g")
+  return str3
+endfunction
+function! SubstituteTestInName()
+  let name = expand("%:t:r")
+  return SubstituteTest(name)
+endfunction
+"map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
+map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
 " Ag
