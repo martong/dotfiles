@@ -123,7 +123,7 @@ Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'haya14busa/vim-easyoperator-phrase'
 Bundle 'justinmk/vim-sneak'
 Bundle 'bogado/file-line'
-Bundle 'JazzCore/ctrlp-cmatcher'
+"Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'martong/vim-visual-star-ag'
 Bundle 'martong/vim-compiledb-path'
@@ -411,7 +411,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
             \ --ignore "build"
             \ -g ""'
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+"let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CommandT<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
 nnoremap <Leader>b :CtrlPBuffer<cr>
