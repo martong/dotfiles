@@ -409,13 +409,7 @@ let g:ctrlp_cmd = 'CtrlP `pwd`'
 let g:ctrlp_by_filename = 1
 "let g:ctrlp_follow_symlinks = 2
 let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
-            \ --ignore "*.o"
-            \ --ignore "*.a"
-            \ --ignore "*.png"
-            \ --ignore "*.jpg"
             \ --ignore "build"
-            \ --ignore "boostLibs"
-            \ --ignore "glm"
             \ -g ""'
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CommandT<cr>
