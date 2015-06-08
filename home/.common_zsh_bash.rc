@@ -6,7 +6,7 @@ export PATH=/usr/local/opt/ccache/libexec:$PATH
 export CCACHE_CPP2=yes
 export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 export PATH=$PATH:/Users/mg/local/bin
-export PYTHONPATH=$PYTHONPATH:/Users/mg/bin/ycm_extra_conf.jsondb/
+export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
 export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
 
 # sugoi
