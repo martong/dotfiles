@@ -14,6 +14,8 @@ alias gvim='$VIMDIR/vim -g'
 alias gvimdiff='$VIMDIR/vim -g -d'
 alias gview='$VIMDIR/vim -g -R'
 alias gvimide='VIMIDE=ide $VIMDIR/vim -g'
+alias vimdiff='$VIMDIR/vim -d'
+alias view='$VIMDIR/vim -R'
 alias vimide='VIMIDE=ide $VIMDIR/vim -v'
 alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
 
