@@ -284,7 +284,8 @@ let g:ycm_global_ycm_extra_conf = '/home/egbomrt/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>', '<Enter>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:ycm_auto_trigger = 0
 let g:ycm_max_diagnostics_to_display = 1000
 "let g:ycm_semantic_triggers =  {
@@ -325,6 +326,7 @@ function! g:UltiSnips_Complete()
     return ""
 endfunction
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsListSnippets="<c-l>"
