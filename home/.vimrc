@@ -144,7 +144,7 @@ Bundle 'tpope/vim-unimpaired'
 "Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
 "Bundle 'file:///Users/mg/tmp/vim-lldb', {'rtp': 'utils/vim-lldb'}
 "Bundle 'vim-scripts/Conque-GDB'
-Bundle 'martong/conque-term'
+"Bundle 'martong/conque-term'
 Bundle 'sjl/gundo.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-sleuth'
