@@ -13,6 +13,7 @@
     <!--<autogen>__KeyToKey__ KeyCode::TAB, KeyCode::SPACE</autogen>-->
   <!--</item>-->
 
+  <!-- TODO use VIRTUALMACHINE from appdef.xml -->
   <appdef>
     <appname>VIRTUALBOXVM</appname>
     <equal>org.virtualbox.app.VirtualBoxVM</equal>
@@ -24,6 +25,14 @@
 	<not>VIRTUALBOXVM</not>
 	<inputsource_only>US</inputsource_only>
 	<autogen>__KeyToKey__ KeyCode::UK_SECTION, KeyCode::BACKQUOTE</autogen>
+  </item>
+
+  <item>
+    <name>Option_R to Control_R (only in MacVim, iTerm)</name>
+    <identifier>remap.optionR2controlR_etx_only_in_macvim_and_iterm</identifier>
+    <!-- Apps are from appdef.xml -->
+    <only>VI, TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::CONTROL_R</autogen>
   </item>
 
 </root>
