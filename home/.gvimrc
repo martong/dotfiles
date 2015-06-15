@@ -24,6 +24,14 @@ set guioptions-=l
 set guioptions-=R
 set guioptions-=r
 
+" Remove all menu items
+"aunmenu *
+" Remove some of the menu items
+aunmenu Sessions
+aunmenu Solarized
+aunmenu Plugin
+let g:Tex_Menus = 0
+
 " Airline config
 let g:airline_powerline_fonts = 1
 set guifont=Inconsolata\ for\ Powerline:h13
