@@ -438,7 +438,7 @@ map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
 
 " Ag/Ack
 " with visual star ag
-let g:vvsa_FindCommand = 'LAg! --cpp'
+let g:quickSearch_FindCommand = 'LAg! --cpp'
 
 
 " Clighter
