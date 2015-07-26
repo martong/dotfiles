@@ -436,9 +436,9 @@ endfunction
 map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
-" Ag
-" Shortcut for search in cpp files
-command! -nargs=1 F LAg! --cpp <q-args>
+" Ag/Ack
+" with visual star ag
+let g:vvsa_FindCommand = 'LAg! --cpp'
 
 
 " Clighter
