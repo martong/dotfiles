@@ -433,12 +433,13 @@ function! SubstituteTestInName()
   return SubstituteTest(name)
 endfunction
 "map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
+" TODO save @9 before and load after
 map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
 " Ag/Ack
 " with visual star ag
-let g:quickSearch_FindCommand = 'LAg! --cpp'
+let g:quickSearch_FindCommand = 'LAg! '
 
 
 " Clighter
