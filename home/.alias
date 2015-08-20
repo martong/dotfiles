@@ -3,6 +3,7 @@
 #
 hash -d w=$HOME/WORK
 hash -d g=$HOME/WORK/git
+hash -d df=$HOME/.homesick/repos/dotfiles
 
 #
 # VIM
