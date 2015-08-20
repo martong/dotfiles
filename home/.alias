@@ -29,8 +29,9 @@ alias gy='addGitSuperStatusHooks; NO_GITSTATUS='
 alias gn='removeGitSuperStatusHooks; NO_GITSTATUS=yes'
 alias gnn='removeGitSuperStatusHooks; NO_GITSTATUS=absolutelyNothing'
 alias gcam='git commit -a -m '
-# zsh git plugin adds the below alias which i dont need
+# oh-my-zsh git plugin adds the below alias which i dont need
 unalias gcm
+alias gcm='git commit -m '
 
 #
 # TMUX
