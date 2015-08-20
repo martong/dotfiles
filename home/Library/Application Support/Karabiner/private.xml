@@ -19,6 +19,11 @@
     <equal>org.virtualbox.app.VirtualBoxVM</equal>
   </appdef>
 
+  <appdef>
+    <appname>CITRIX_RECEIVER</appname>
+    <equal>com.citrix.receiver.nomas</equal>
+  </appdef>
+
   <item>
 	<name>Section(§) to Backquote(`) only in US layout, not in VirtualBoxVM</name>
 	<identifier>remap.uk_section2backquote.only_in_us_layout</identifier>
@@ -28,10 +33,10 @@
   </item>
 
   <item>
-    <name>Option_R to Control_R (only in MacVim, iTerm)</name>
+    <name>Option_R to Control_R (only in MacVim, iTerm, Citrix Reciever)</name>
     <identifier>remap.optionR2controlR_etx_only_in_macvim_and_iterm</identifier>
     <!-- Apps are from appdef.xml -->
-    <only>VI, TERMINAL</only>
+    <only>VI, TERMINAL, CITRIX_RECEIVER</only>
     <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::CONTROL_R</autogen>
   </item>
 
