@@ -1,14 +1,19 @@
 #!/bin/bash
 
 # Set up iterm2 with
-# pref > advanced > run command > /Users/mg/bin/iterm_vim \1:\2
+# pref > advanced > run command > /Users/mg/bin/iterm_vim \1 \2
 
 #echo "$@" >> ~/tmp/iterm_vim.log
 VIM=/Applications/MacVim.app/Contents/MacOS/vim
 #if [ -z "$VIMSERV" ]; then VIMSERV=vim; fi
 VIMSERV=VIM
+
 # Change focus as well
 #$VIM --servername $VIMSERV --remote "$@"
+#$VIM --servername $VIMSERV --remote-send "<ESC>:silent! e $1|$2|call foreground()<CR>"
+$VIM --servername $VIMSERV --remote-send "<ESC>:e +$2 $1|call foreground()<CR>"
+
 # Do not change focus
-$VIM --servername $VIMSERV --remote-send "<ESC>:e $@<CR>"
+#$VIM --servername $VIMSERV --remote-send "<ESC>:e $1|$2<CR>"
+##$VIM --servername $VIMSERV --remote +"$2" "$1"
 
