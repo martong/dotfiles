@@ -32,6 +32,8 @@ alias gcam='git commit -a -m '
 # oh-my-zsh git plugin adds the below alias which i dont need
 unalias gcm
 alias gcm='git commit -m '
+unalias gl
+alias gl=gitlog
 
 #
 # TMUX
