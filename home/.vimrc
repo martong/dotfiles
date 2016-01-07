@@ -206,6 +206,17 @@ autocmd CursorHoldI * silent! checktime
 " Automatically open quickfix window after e.g. :vimgrep
 "autocmd QuickFixCmdPost [^l]* nested cwindow
 
+"" Unset cc if the window is too small
+"function! SetColorColumn()
+"  if winwidth(0) < 81
+"    set colorcolumn=
+"  else
+"    set colorcolumn=81
+"  endif
+"endfunction
+"autocmd WinEnter * call SetColorColumn()
+"autocmd WinLeave * call SetColorColumn()
+
 
 " Tex
 " http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
