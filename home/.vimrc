@@ -58,10 +58,12 @@ set autoread
 set mouse=a
 " Indent linebreaks
 set breakindent
-set showbreak=↪
+"set showbreak=↪
+set showbreak=
 set breakat-=-
 set breakat-=*
 set breakat+=()
+set cpoptions+=n
 
 
 " Solarized colorscheme
