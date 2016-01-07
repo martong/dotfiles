@@ -183,6 +183,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'martong/a.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'wincent/command-t'
+Bundle 'tpope/vim-dispatch'
 
 " clang-format dependencies
 "Bundle 'kana/vim-operator-user'
@@ -203,7 +204,7 @@ autocmd BufEnter * silent! checktime
 autocmd CursorHold * silent! checktime
 autocmd CursorHoldI * silent! checktime
 " Automatically open quickfix window after e.g. :vimgrep
-autocmd QuickFixCmdPost [^l]* nested cwindow
+"autocmd QuickFixCmdPost [^l]* nested cwindow
 
 
 " Tex
