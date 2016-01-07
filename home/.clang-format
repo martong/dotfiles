@@ -33,7 +33,7 @@ Cpp11BracedListStyle: true
 Standard:        Auto
 IndentWidth:     4
 TabWidth:        4
-UseTab:          Always
+UseTab:          Never
 BreakBeforeBraces: Attach
 IndentFunctionDeclarationAfterType: true
 SpacesInParentheses: false
