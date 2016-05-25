@@ -25,7 +25,7 @@ flags = [
 '-x', 'c++',
 
 # compiler-rt (e.g. string.h)
-'-isystem', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include',
+'-isystem', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include',
 
 #'-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../include/c++/v1',
 #'-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../lib/clang/3.5.0/include'
