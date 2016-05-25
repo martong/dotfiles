@@ -5,3 +5,5 @@ mymake
 .ropeproject
 logfile*
 a.out
+*dSYM
+.DS_Store
