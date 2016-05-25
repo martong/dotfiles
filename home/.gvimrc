@@ -9,9 +9,9 @@ nnoremap <D-l> <C-w>l
 nnoremap <D-p> <C-w>p
 nnoremap <D-w> <C-w>
 
-nnoremap <D-d> :Bdelete<CR>
-nnoremap <D-e> :e#<CR>
-nnoremap <D-b> :wa<CR>:make!<CR>
+"nnoremap <D-d> :Bdelete<CR>
+"nnoremap <D-e> :e#<CR>
+"nnoremap <D-b> :wa<CR>:make!<CR>
 
 set macmeta
 nnoremap <M-h> gT
