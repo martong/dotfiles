@@ -509,5 +509,6 @@ map <Space> <Leader>
 " Do not enter Ex mode
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
+nnoremap <leader>b :wa<CR>:make!<CR>
 
 
