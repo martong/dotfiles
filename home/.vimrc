@@ -409,9 +409,9 @@ vmap <Leader>cf :pyf /Users/mg/local/bin/clang-format.py<CR>
 
 
 " rtags
-map \j :call rtags#JumpTo()<CR>
-map \r :call rtags#FindRefs()<CR>
-noremap <Leader>J :call rtags#FindSymbolsOfWordUnderCursor()<CR>
+map \rj :call rtags#JumpTo()<CR>
+map \rr :call rtags#FindRefs()<CR>
+noremap <Leader>rJ :call rtags#FindSymbolsOfWordUnderCursor()<CR>
 
 
 " Tagbar
