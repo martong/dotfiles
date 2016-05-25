@@ -1,6 +1,6 @@
-# tmux 1.8 for sles11
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/proj/cudbdm/tools/external/libevent/lib/
-#export PATH=/proj/cudbdm/tools/external/tmux-1.9a/SLES11/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/Library/TeX/Distributions/Programs/texbin:$PATH
+
 export PATH=/Users/mg/local/rtags_src/built/bin:$PATH
 export PATH=/usr/local/opt/ccache/libexec:$PATH
 export CCACHE_CPP2=yes
@@ -8,9 +8,6 @@ export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 export PATH=$PATH:/Users/mg/local/bin
 export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
 export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
-
-# sugoi
-export PATH=$PATH:$HOME/local/sugoi/bin
 
 umask 002
 
