@@ -40,4 +40,12 @@
     <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::CONTROL_R</autogen>
   </item>
 
+  <item>
+    <name>Swap @ and double-quote(") (only in Citrix Reciever)</name>
+    <identifier>remap.uk_swap_at_doublequote_only</identifier>
+    <only>CITRIX_RECEIVER</only>
+    <autogen>__KeyToKey__ KeyCode::KEY_2, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::KEY_2, ModifierFlag::SHIFT_L</autogen>
+  </item>
+
 </root>
