@@ -426,6 +426,9 @@ map <Leader>T :TagbarToggle<CR>
 
 
 " CtrlP
+" Do not locate window for file
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_match_current_file = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_cmd = 'CtrlP `pwd`'
@@ -437,7 +440,7 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CommandT<cr>
 nnoremap <Leader>o :CtrlP `pwd`<cr>
-nnoremap <Leader>b :CtrlPBuffer<cr>
+noremap <leader>v :CtrlPBuffer<CR>
 function! SubstituteTest(str)
   let str2 = a:str
   " substitute depends on ignorecase
