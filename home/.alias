@@ -48,6 +48,8 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
+alias h='history'
+
 # ag find
 alias af='ag -iug '
 alias ff='ag -iug '
