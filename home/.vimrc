@@ -121,6 +121,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gibiansky/vim-latex-objects'
 Bundle 'danro/rename.vim'
 Bundle 'klen/python-mode'
 "Bundle 'jceb/vim-editqf'
