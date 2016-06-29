@@ -36,6 +36,8 @@ unalias gcm
 alias gcm='git commit -m '
 unalias gl
 alias gl=gitlog
+unalias gdd 2>/dev/null
+alias gdd='gd --color-words'
 
 #
 # TMUX
