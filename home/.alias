@@ -51,6 +51,7 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 alias h='history'
+alias ls='ls -G --color=always'
 
 # ag find
 alias af='ag -iug '
