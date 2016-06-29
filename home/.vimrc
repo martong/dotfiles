@@ -222,6 +222,7 @@ autocmd CursorHoldI * silent! checktime
 
 " Tex
 " http://tex.stackexchange.com/questions/62134/how-to-disable-all-vim-latex-mappings
+let g:tex_comment_nospell=1
 let g:Tex_SmartKeyBS = 0
 let g:Tex_SmartKeyQuote = 0
 let g:Tex_SmartKeyDot = 0
