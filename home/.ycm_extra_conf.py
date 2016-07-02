@@ -1,41 +1,7 @@
 import os
 import ycm_core
 
-# These are the compilation flags that will be used in case there's no
-# compilation database set (by default, one is not set).
-# CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
-flags = [
-#'-Wall',
-#'-Wextra',
-#'-Wno-long-long',
-#'-Wno-variadic-macros',
-#"-Wno-ignored-qualifiers",
-# THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
-# language to use when compiling headers. So it will guess. Badly. So C++
-# headers will be compiled as C headers. You don't want that so ALWAYS specify
-# a "-std=<something>".
-# For a C project, you would set this to something like 'c99' instead of
-# 'c++11'.
-'-std=c++1y',
-'-stdlib=libc++',
-# ...and the same thing goes for the magic -x option which specifies the
-# language that the files to be compiled are written in. This is mostly
-# relevant for c++ headers.
-# For a C project, you would set this to 'c' instead of 'c++'.
-'-x', 'c++',
-
-# compiler-rt (e.g. string.h)
-'-isystem', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include',
-
-#'-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../include/c++/v1',
-#'-isystem', '/Users/mg/local/clang+llvm-3.5.0-macosx-apple-darwin/bin/../lib/clang/3.5.0/include'
-'-isystem', '/usr/include',
-'-isystem', '/usr/local/include',
-'-isystem', '/Users/mg/local/boost/boost.1.59.0/include',
-'-isystem', '/Users/mg/local/gmock/gtest/include',
-'-isystem', '/Users/mg/local/gmock/include'
-
-]
+flags = ['-x', 'c++', '-Wall', '-W', '-pedantic', '-std=c++1y', '-g', '-isysroot', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk', '-resource-dir=/Users/mg/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd/../clang_includes', '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1', '-isystem', '/usr/local/include', '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include', '-isystem', '/usr/include', '-isystem', '/System/Library/Frameworks', '-isystem', '/Library/Frameworks']
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
