@@ -352,6 +352,7 @@ map gi :YcmCompleter GoToImprecise<CR>
 map <Leader>yY :YcmDiags<cr>
 map <Leader>yy :YcmForceCompileAndDiagnostics<cr>
 map <Leader>ys :YcmShowDetailedDiagnostic<cr>
+map <Leader>yf :YcmCompleter FixIt<cr>
 map <Leader>yt :YcmCompleter GetType<cr>
 
 
