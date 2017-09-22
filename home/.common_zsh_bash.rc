@@ -12,7 +12,9 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 umask 002
 
-export EDITOR=vim
+#export EDITOR=vim
+VIMDIR=/Applications/MacVim.app/Contents/MacOS/
+export EDITOR=$VIMDIR/Vim
 export WINEDITOR=gvim
 
 test -s ~/.alias && . ~/.alias || true

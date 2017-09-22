@@ -9,7 +9,6 @@ hash -d df=$HOME/.homesick/repos/dotfiles
 # VIM
 #
 #VIMDIR=/usr/local/Cellar/macvim/7.4-73/bin/
-VIMDIR=/Applications/MacVim.app/Contents/MacOS/
 #vim_=`which vim`
 #VIMDIR=`dirname $vim_`
 alias vim='$VIMDIR/Vim'
