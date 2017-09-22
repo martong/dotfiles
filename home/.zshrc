@@ -67,6 +67,7 @@ compinit
 # therefore it must be installed and loaded before history-substring-search.
 plugins=(wd autojump brew vi-mode gitfast git-extras zsh-syntax-highlighting zsh-history-substring-search gradle)
 
+DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 setopt histfindnodups
 
