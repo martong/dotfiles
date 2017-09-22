@@ -24,17 +24,20 @@ alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_e
 #
 # GIT
 #
+unalias g 2>/dev/null
+alias g='git'
+unalias gss 2>/dev/null
+alias gss='git status -s'
+unalias gitlog 2>/dev/null
 alias gitlog='git log --color --oneline --graph --decorate '
+unalias gitwhat 2>/dev/null
 alias gitwhat='git whatchanged --color --graph --decorate '
-alias gy='addGitSuperStatusHooks; NO_GITSTATUS='
-alias gn='removeGitSuperStatusHooks; NO_GITSTATUS=yes'
-alias gnn='removeGitSuperStatusHooks; NO_GITSTATUS=absolutelyNothing'
-alias gcam='git commit -a -m '
-# oh-my-zsh git plugin adds the below alias which i dont need
-unalias gcm
+unalias gcm 2>/dev/null
 alias gcm='git commit -m '
-unalias gl
+unalias gl 2>/dev/null
 alias gl=gitlog
+unalias gd 2>/dev/null
+alias gd='git diff'
 unalias gdd 2>/dev/null
 alias gdd='gd --color-words'
 
