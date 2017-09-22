@@ -461,19 +461,24 @@ map <Leader>T :TagbarToggle<CR>
 " CtrlP
 " Do not locate window for file
 let g:ctrlp_switch_buffer = 0
+" Display current file as well
 let g:ctrlp_match_current_file = 1
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_cmd = 'CtrlP `pwd`'
 let g:ctrlp_by_filename = 1
+" Mru will display only files in cwd
+let g:ctrlp_mruf_relative = 1
 "let g:ctrlp_follow_symlinks = 2
-let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
-            \ --ignore "build"
-            \ -g ""'
+"let g:ctrlp_user_command = 'ag %s --ignore-case --nocolor --nogroup
+            "\ --ignore "build"
+            "\ -g ""'
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CommandT<cr>
-nnoremap <Leader>o :CtrlP `pwd`<cr>
-noremap <leader>v :CtrlPBuffer<CR>
+"nnoremap <Leader>o :CtrlP `pwd`<cr>
+nnoremap <Leader>o :CtrlPCurWD<cr>
+noremap <leader>v :CtrlPMRUFiles<CR>
+noremap <leader>b :CtrlPBuffer<CR>
 function! SubstituteTest(str)
   let str2 = a:str
   " substitute depends on ignorecase
@@ -546,6 +551,6 @@ map <Space> <Leader>
 " Do not enter Ex mode
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
-nnoremap <leader>b :wa<CR>:make!<CR>
+nnoremap <leader>B :wa<CR>:make!<CR>
 
 
