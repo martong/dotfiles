@@ -121,6 +121,7 @@ filetype off " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'eapache/rainbow_parentheses.vim'
 Bundle 'gibiansky/vim-latex-objects'
 Bundle 'danro/rename.vim'
 Bundle 'klen/python-mode'
@@ -218,6 +219,36 @@ autocmd CursorHoldI * silent! checktime
 "endfunction
 "autocmd WinEnter * call SetColorColumn()
 "autocmd WinLeave * call SetColorColumn()
+
+
+" Rainbow parenthesis
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+let g:rbpt_max = 32
+let g:rbpt_colorpairs = [
+    \ [' 27', 'RoyalBlue3'],
+    \ [' 28', 'SeaGreen3'],
+    \ [' 93', 'DarkOrchid3'],
+    \ ['100', 'firebrick3'],
+    \
+    \ [' 33', 'RoyalBlue3'],
+    \ [' 34', 'SeaGreen3'],
+    \ [' 99', 'DarkOrchid3'],
+    \ ['142', 'firebrick3'],
+    \
+    \ [' 39', 'RoyalBlue3'],
+    \ [' 40', 'SeaGreen3'],
+    \ ['129', 'DarkOrchid3'],
+    \ ['178', 'firebrick3'],
+    \
+    \ [' 45', 'RoyalBlue3'],
+    \ [' 48', 'SeaGreen3'],
+    \ ['207', 'DarkOrchid3'],
+    \ ['220', 'firebrick3']
+    \ ]
 
 
 " Tex
