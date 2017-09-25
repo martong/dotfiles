@@ -21,6 +21,7 @@
 [core]
 	excludesfile = /Users/mg/.gitignore
 	pager = less -x1,5
+	editor = vim
 	;pager = less -F -x1,5
 [push]
 	default = simple
