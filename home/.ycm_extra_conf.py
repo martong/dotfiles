@@ -1,7 +1,7 @@
 import os
 import ycm_core
 
-flags = ['-x', 'c++', '-Wall', '-W', '-pedantic', '-std=c++1y', '-g', '-isysroot', '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk', '-resource-dir=/Users/mg/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd/../clang_includes', '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1', '-isystem', '/usr/local/include', '-isystem', '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include', '-isystem', '/usr/include', '-isystem', '/System/Library/Frameworks', '-isystem', '/Library/Frameworks']
+flags = ['-x', 'c++', '-Wall', '-W', '-pedantic', '-std=c++1y', '-g']
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the

@@ -10,16 +10,19 @@ hash -d df=$HOME/.homesick/repos/dotfiles
 #
 #VIMDIR=/usr/local/Cellar/macvim/7.4-73/bin/
 #vim_=`which vim`
-#VIMDIR=`dirname $vim_`
-alias vim='$VIMDIR/Vim'
-alias gvim='$VIMDIR/vim -g'
-alias gvimdiff='$VIMDIR/vim -g -d'
-alias gview='$VIMDIR/vim -g -R'
-alias gvimide='VIMIDE=ide $VIMDIR/vim -g'
-alias vimdiff='$VIMDIR/vim -d'
-alias view='$VIMDIR/vim -R'
-alias vimide='VIMIDE=ide $VIMDIR/vim -v'
-alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
+#export VIMDIR=`dirname $vim_`
+#alias vim='$VIMDIR/Vim'
+#alias gvim='$VIMDIR/vim -g'
+#alias gvimdiff='$VIMDIR/vim -g -d'
+#alias gview='$VIMDIR/vim -g -R'
+#alias gvimide='VIMIDE=ide $VIMDIR/vim -g'
+#alias vimdiff='$VIMDIR/vim -d'
+#alias view='$VIMDIR/vim -R'
+#alias vimide='VIMIDE=ide $VIMDIR/vim -v'
+#alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
+alias vimide='VIMIDE=ide vim -v'
+alias gvimide='VIMIDE=ide vim -g'
+alias vim_pure='vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
 
 #
 # GIT

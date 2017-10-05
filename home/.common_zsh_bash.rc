@@ -1,27 +1,19 @@
-export PATH=/usr/local/bin:$PATH
-export PATH=/Library/TeX/Distributions/Programs/texbin:$PATH
-
-export PATH=/Users/mg/local/rtags_src/built/bin:$PATH
-export PATH=/usr/local/opt/ccache/libexec:$PATH
+#export PATH=/usr/local/bin:$PATH
+export PATH=/home/egbomrt/local/rtags/build/bin:$PATH
+#export PATH=/usr/local/opt/ccache/libexec:$PATH
 export CCACHE_CPP2=yes
-export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
-export PATH=$PATH:/Users/mg/local/bin
+#export PATH=$PATH:/Users/mg/local/bin
 export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
-export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+#export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
 
-umask 002
-
-#export EDITOR=vim
-VIMDIR=/Applications/MacVim.app/Contents/MacOS/
-export EDITOR=$VIMDIR/Vim
+export EDITOR=vim
 export WINEDITOR=gvim
 
 test -s ~/.alias && . ~/.alias || true
 
 # dircolors-solarized for MAC Os
 #export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
-eval `dircolors $HOME/dircolors-solarized/dircolors.256dark`
+#eval `dircolors $HOME/dircolors-solarized/dircolors.256dark`
 
 # Framework for managing dotfiles easily.
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

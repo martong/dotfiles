@@ -107,8 +107,6 @@ else
   let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
   let &titlestring=DIRNAME
 
-  "http://stackoverflow.com/questions/6821033/vim-how-to-run-a-command-immediately-when-starting-vim
-  autocmd VimEnter * CompileDbPathIfExists build/osx_x64_debug/ninja/compile_commands.json
 endif
 
 
@@ -118,87 +116,106 @@ let g:tagbar_ctags_bin = '/Users/mg/archives/ctags-code/ctags'
 
 " Vundle stuff
 filetype off " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'eapache/rainbow_parentheses.vim'
-Bundle 'gibiansky/vim-latex-objects'
-Bundle 'danro/rename.vim'
-Bundle 'klen/python-mode'
-"Bundle 'jceb/vim-editqf'
-Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'haya14busa/vim-easyoperator-phrase'
-Bundle 'justinmk/vim-sneak'
-Bundle 'bogado/file-line'
-"Bundle 'JazzCore/ctrlp-cmatcher'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'martong/vim-visual-star-ag'
-Bundle 'martong/vim-compiledb-path'
-Bundle 'ciaranm/detectindent'
-Bundle 'tpope/vim-repeat'
-Bundle 'Peeja/vim-cdo'
-Bundle 'henrik/vim-qargs'
-Bundle 'tpope/vim-abolish'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'majutsushi/tagbar'
-Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-Bundle 'rking/ag.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-pathogen'
-Bundle 'SirVer/ultisnips'
-Bundle 'tpope/vim-unimpaired'
-"Bundle 'gilligan/vim-lldb'
-"Bundle 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
-"Bundle 'file:///Users/mg/tmp/vim-lldb', {'rtp': 'utils/vim-lldb'}
-"Bundle 'vim-scripts/Conque-GDB'
-"Bundle 'martong/conque-term'
-Bundle 'sjl/gundo.vim'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'tpope/vim-sleuth'
-Bundle 'h1mesuke/vim-unittest'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'bronson/vim-trailing-whitespace'
-"Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'BufOnly.vim'
-Bundle 'headerguard'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'eapache/rainbow_parentheses.vim'
+Plugin 'gibiansky/vim-latex-objects'
+Plugin 'danro/rename.vim'
+Plugin 'klen/python-mode'
+"Plugin 'jceb/vim-editqf'
+Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'haya14busa/vim-easyoperator-phrase'
+Plugin 'justinmk/vim-sneak'
+Plugin 'bogado/file-line'
+"Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'martong/vim-visual-star-ag'
+Plugin 'martong/vim-compiledb-path'
+Plugin 'ciaranm/detectindent'
+Plugin 'tpope/vim-repeat'
+Plugin 'Peeja/vim-cdo'
+Plugin 'henrik/vim-qargs'
+Plugin 'tpope/vim-abolish'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'majutsushi/tagbar'
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-pathogen'
+Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-unimpaired'
+"Plugin 'gilligan/vim-lldb'
+"Plugin 'file:///Users/mg/dhp/git/lldb', {'rtp': 'utils/vim-lldb'}
+"Plugin 'file:///Users/mg/tmp/vim-lldb', {'rtp': 'utils/vim-lldb'}
+"Plugin 'vim-scripts/Conque-GDB'
+"Plugin 'martong/conque-term'
+Plugin 'sjl/gundo.vim'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'tpope/vim-sleuth'
+Plugin 'h1mesuke/vim-unittest'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'lyuts/vim-rtags', {'name': 'lyuts-vim-rtags'}
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'bronson/vim-trailing-whitespace'
+"Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'BufOnly.vim'
+Plugin 'headerguard'
+Plugin 'Valloric/YouCompleteMe'
 "if $VIMIDE == "ide"
 if 0
-  Bundle 'bbchung/clighter'
-  "Bundle 'matthiasvegh/ycmlighter'
+  Plugin 'bbchung/clighter'
+  "Plugin 'matthiasvegh/ycmlighter'
 endif
 " :Bdelete --> does not close windows, just the buffer.
-Bundle 'moll/vim-bbye'
+Plugin 'moll/vim-bbye'
 " vim-reload, vim-session depends on it
-Bundle 'xolox/vim-misc'
+Plugin 'xolox/vim-misc'
 " automatically reloads various types of Vim scripts as you're editing them
-Bundle 'xolox/vim-reload'
-Bundle 'xolox/vim-session'
-"Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-jp/cpp-vim'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'martong/a.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'wincent/command-t'
-Bundle 'tpope/vim-dispatch'
+Plugin 'xolox/vim-reload'
+Plugin 'xolox/vim-session'
+"Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-jp/cpp-vim'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'martong/a.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'wincent/command-t'
+Plugin 'tpope/vim-dispatch'
 
 " clang-format dependencies
-"Bundle 'kana/vim-operator-user'
-"Bundle 'Shougo/vimproc.vim'
-"Bundle 'rhysd/vim-clang-format'
+"Plugin 'kana/vim-operator-user'
+"Plugin 'Shougo/vimproc.vim'
+"Plugin 'rhysd/vim-clang-format'
 
-filetype plugin indent on " required!
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
 " Pathogen
 "execute pathogen#infect()
-execute pathogen#infect('bundle_pathogen/{}')
+"execute pathogen#infect('bundle_pathogen/{}')
 
 
 " Auto commands
