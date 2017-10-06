@@ -145,7 +145,7 @@ Plugin 'henrik/vim-qargs'
 Plugin 'tpope/vim-abolish'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'majutsushi/tagbar'
-Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+"Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'rking/ag.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-pathogen'
@@ -171,11 +171,6 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'BufOnly.vim'
 Plugin 'headerguard'
 Plugin 'Valloric/YouCompleteMe'
-"if $VIMIDE == "ide"
-if 0
-  Plugin 'bbchung/clighter'
-  "Plugin 'matthiasvegh/ycmlighter'
-endif
 " :Bdelete --> does not close windows, just the buffer.
 Plugin 'moll/vim-bbye'
 " vim-reload, vim-session depends on it
