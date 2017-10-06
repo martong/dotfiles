@@ -2,7 +2,6 @@
 # directories
 #
 hash -d w=$HOME/WORK
-hash -d g=$HOME/WORK/git
 hash -d df=$HOME/.homesick/repos/dotfiles
 
 #
@@ -55,12 +54,13 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
+# Other extensions
 alias h='history'
 alias ls='ls -G --color=always'
+alias rm='safe-rm -i'
 
 # ag find
 alias af='ag -iug '
 alias ff='ag -iug '
 alias f='ag -ig '
 
-alias lubuntu='ssh osboxes@192.168.56.2 '
