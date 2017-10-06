@@ -9,4 +9,4 @@ a.out
 .DS_Store
 compile_commands.json*
 build_cmake
-ycm_*
+ycm*

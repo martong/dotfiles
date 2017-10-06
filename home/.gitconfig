@@ -19,7 +19,7 @@
 	#path = /app/vim/7.3.401/LMWP3/bin/vimdiff
 	#cmd = vimdiff -u ~/.vimrc_empty --cmd \"set runtimepath=~/.vim_empty\" $LOCAL $REMOTE
 [core]
-	excludesfile = /Users/mg/.gitignore
+	excludesfile = /home/egbomrt/.gitignore
 	pager = less -x1,5
 	editor = vim
 	;pager = less -F -x1,5
