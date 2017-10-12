@@ -418,7 +418,8 @@ let g:alternateRelativeFiles = 1
 " Also we add the current position to the jumplist, so
 " the above trick will not fuck up the current position when there is no
 " alternate file.
-map <Leader>a :normal m'<cr>:A<cr><C-O><C-I>
+"map <Leader>a :normal m'<cr>:A<cr><C-O><C-I>
+map <Leader>a :A<cr>
 
 
 " clang-format
