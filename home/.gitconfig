@@ -27,4 +27,4 @@
 	default = simple
 
 [clangFormat]
-	binary = /Users/mg/local/clang_src/llvm_installed/bin/clang-format
+	binary = clang-format

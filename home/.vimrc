@@ -450,8 +450,8 @@ function! GitClangFormat()
     execute "!cd ". expand("%:p:h") . " && git clang-format --force " . expand("%:p")
 endfunction
 nnoremap <Leader>cf :call GitClangFormat()<CR>
-map <Leader>Cf :0,$pyf /Users/mg/local/bin/clang-format.py<CR>
-vmap <Leader>cf :pyf /Users/mg/local/bin/clang-format.py<CR>
+map <Leader>Cf :0,$py3file /home/egbomrt/bin/clang-format.py<CR>
+vmap <Leader>cf :py3file /home/egbomrt/bin/clang-format.py<CR>
 
 
 " rtags
