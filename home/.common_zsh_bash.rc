@@ -14,6 +14,7 @@ test -s ~/.alias && . ~/.alias || true
 # dircolors-solarized for MAC Os
 #export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 #eval `dircolors $HOME/dircolors-solarized/dircolors.256dark`
+eval `dircolors /home/egbomrt/.dir_colors/dircolors`
 
 # Framework for managing dotfiles easily.
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
