@@ -1,6 +1,7 @@
 #export PATH=/usr/local/bin:$PATH
 export PATH=/home/egbomrt/local/rtags/build/bin:$PATH
-export PATH="/usr/lib/ccache:$PATH"
+export PATH=/home/egbomrt/local/tmux:$PATH
+export PATH=/usr/lib/ccache:$PATH
 export CCACHE_CPP2=yes
 export PATH=$PATH:/home/egbomrt/bin
 #export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
