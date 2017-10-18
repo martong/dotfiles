@@ -359,8 +359,10 @@ let g:ycm_max_diagnostics_to_display = 1000
 "  \   'lua' : ['.', ':'],
 "  \   'erlang' : [':'],
 "  \ }
-map gd :YcmCompleter GoTo<CR>
-map gi :YcmCompleter GoToImprecise<CR>
+map gd :YcmCompleter GoToImprecise<CR>
+"map gi :YcmCompleter GoToImprecise<CR>
+map gD :YcmCompleter GoTo<CR>
+autocmd FileType python map <buffer> gd :YcmCompleter GoTo<CR>
 map <Leader>yY :YcmDiags<cr>
 map <Leader>yy :YcmForceCompileAndDiagnostics<cr>
 map <Leader>ys :YcmShowDetailedDiagnostic<cr>
