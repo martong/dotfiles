@@ -65,6 +65,8 @@ set breakat-=*
 set breakat+=()
 set cpoptions+=n
 
+set nofoldenable
+
 
 " Solarized colorscheme
 " http://stackoverflow.com/questions/12774141/strange-changing-background-color-in-vim-solarized
