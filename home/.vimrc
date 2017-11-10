@@ -316,7 +316,7 @@ map <Leader>f :NERDTreeFind<cr>
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
-let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
+let g:NERDTreeIgnore = ['\.o$', '\.o-.*$', '\.pyc$']
 
 
 " CommandT config
