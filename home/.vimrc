@@ -366,7 +366,9 @@ let g:ycm_max_diagnostics_to_display = 1000
 "  \   'erlang' : [':'],
 "  \ }
 map gd :YcmCompleter GoToImprecise<CR>
-"map gi :YcmCompleter GoToImprecise<CR>
+" Push to jumplist before go in insert mode of the location of the last insert
+" mode exit
+nnoremap gi m'gi
 map gD :YcmCompleter GoTo<CR>
 autocmd FileType python map <buffer> gd :YcmCompleter GoTo<CR>
 map <Leader>yY :YcmDiags<cr>
