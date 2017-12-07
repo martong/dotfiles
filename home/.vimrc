@@ -463,6 +463,8 @@ endfunction
 nnoremap <Leader>cf :call GitClangFormat()<CR>
 map <Leader>Cf :0,$py3file /home/egbomrt/bin/clang-format.py<CR>
 vmap <Leader>cf :py3file /home/egbomrt/bin/clang-format.py<CR>
+"Python
+autocmd FileType python map <buffer> <Leader>cf :PymodeLintAuto<CR>
 
 
 " rtags
