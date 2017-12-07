@@ -188,6 +188,7 @@ Plugin 'martong/a.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-dispatch'
+Plugin 'tell-k/vim-autopep8'
 
 " clang-format dependencies
 "Plugin 'kana/vim-operator-user'
