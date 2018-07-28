@@ -303,6 +303,10 @@ let g:NERDTreeDirArrows=0
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 let g:NERDTreeIgnore = ['\.o$', '\.o-.*$']
+" rebind enter and double click to open in the same window, (don't jump to
+" other window if the buffer is open there)
+autocmd FileType nerdtree nmap <buffer> <CR> go
+autocmd FileType nerdtree nmap <buffer> <2-LeftMouse> go
 
 
 " CommandT config
