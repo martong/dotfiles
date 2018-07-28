@@ -20,3 +20,17 @@ locklessly
 inlined
 spinlock
 CAS
+FCI
+XRay
+SUT
+macOS
+AOP
+JIT
+ABI
+vtable
+vpointer
+inlines
+Stepanov
+quicksort
+MSVC
+unbeneficial
