@@ -556,5 +556,8 @@ map <Space> <Leader>
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
 nnoremap <leader>B :wa<CR>:make!<CR>
-
+" Making & trigger the :&& command is more useful.
+" It preserves flags and therefore produces more consistent results.
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
 
