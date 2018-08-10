@@ -6,6 +6,7 @@ export CCACHE_CPP2=yes
 export PATH=$PATH:/home/egbomrt/bin
 #export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
 #export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
+export PATH=$PATH:~/local/arcanist/arcanist/bin
 
 export EDITOR=vim
 export WINEDITOR=gvim
