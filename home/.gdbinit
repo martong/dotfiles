@@ -10,4 +10,4 @@ set history save on
 set history filename ~/.gdb_history
 set unwindonsignal on
 
-source ~/WORK/llvm3/git/llvm/utils/gdb-scripts/prettyprinters.py
+source ~/WORK/llvm/git/llvm/utils/gdb-scripts/prettyprinters.py
