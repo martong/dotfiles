@@ -42,6 +42,8 @@ unalias gd 2>/dev/null
 alias gd='git diff'
 unalias gdd 2>/dev/null
 alias gdd='gd --color-words'
+unalias gcf 2>/dev/null
+alias gcf='git clang-format '
 
 #
 # TMUX
