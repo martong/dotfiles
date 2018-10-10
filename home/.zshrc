@@ -175,6 +175,9 @@ setopt NO_HUP
 # So C-W behaves like in bash.
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+# Do not require >! to redirect stdout into existing file
+setopt clobber
+
 
 source ~/.common_zsh_bash.rc
 # Add aliases, overwrite some prezto aliases
