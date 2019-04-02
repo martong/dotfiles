@@ -182,3 +182,5 @@ setopt clobber
 source ~/.common_zsh_bash.rc
 # Add aliases, overwrite some prezto aliases
 test -s ~/.alias && . ~/.alias || true
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
