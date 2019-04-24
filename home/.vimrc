@@ -71,7 +71,7 @@ set nofoldenable
 "show tab number in tabline
 "http://vim.wikia.com/wiki/Show_tab_number_in_your_tab_line
 if exists("+showtabline")
-     function MyTabLine()
+     function! MyTabLine()
          let s = ''
          let t = tabpagenr()
          let i = 1
