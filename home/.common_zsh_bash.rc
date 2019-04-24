@@ -10,6 +10,7 @@ export PATH=$PATH:~/local/arcanist/arcanist/bin
 
 export EDITOR=vim
 export WINEDITOR=gvim
+export VIMIDE=ide
 
 test -s ~/.alias && . ~/.alias || true
 
