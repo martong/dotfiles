@@ -220,6 +220,8 @@ Plugin 'scrooloose/nerdcommenter'
 "Plugin 'wincent/command-t'
 "Plugin 'tpope/vim-dispatch'
 Plugin 'tell-k/vim-autopep8'
+set rtp+=~/.fzf
+Plugin 'junegunn/fzf.vim'
 
 " clang-format dependencies
 "Plugin 'kana/vim-operator-user'
@@ -531,8 +533,8 @@ let g:ctrlp_mruf_relative = 1
             "\ -g ""'
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 nnoremap <Leader>t :CommandT<cr>
-"nnoremap <Leader>o :CtrlP `pwd`<cr>
-nnoremap <Leader>o :CtrlPCurWD<cr>
+"nnoremap <Leader>o :CtrlPCurWD<cr>
+nnoremap <Leader>o :Files<cr>
 noremap <leader>v :CtrlPMRUFiles<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 function! SubstituteTest(str)
