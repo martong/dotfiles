@@ -66,3 +66,5 @@ alias af='ag -iug '
 alias ff='ag -iug '
 alias f='ag -ig '
 
+alias t=true
+
