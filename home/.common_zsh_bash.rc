@@ -22,4 +22,4 @@ eval `dircolors /home/egbomrt/.dir_colors/dircolors`
 # Framework for managing dotfiles easily.
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
-
+stty -ixon
