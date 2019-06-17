@@ -50,8 +50,6 @@ set wildmode=longest,list
 set history=500
 " Mute bell
 "set vb t_vb=
-" Match if-endif like pairs, not just parens
-runtime macros/matchit.vim
 highlight Cursor guifg=black guibg=white
 
 set autoread
@@ -160,7 +158,8 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'eapache/rainbow_parentheses.vim'
+"Plugin 'eapache/rainbow_parentheses.vim'
+Plugin 'luochen1990/rainbow'
 Plugin 'gibiansky/vim-latex-objects'
 Plugin 'danro/rename.vim'
 Plugin 'klen/python-mode'
@@ -222,6 +221,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tell-k/vim-autopep8'
 set rtp+=~/.fzf
 Plugin 'junegunn/fzf.vim'
+" Advanced text objects for matching parens. Similar to matchit, but better.
+Plugin 'andymass/vim-matchup'
 
 " clang-format dependencies
 "Plugin 'kana/vim-operator-user'
@@ -270,33 +271,11 @@ autocmd CursorHoldI * silent! checktime
 
 
 " Rainbow parenthesis
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+let g:rainbow_active = 1
 
-let g:rbpt_max = 32
-let g:rbpt_colorpairs = [
-    \ [' 27', 'RoyalBlue3'],
-    \ [' 28', 'SeaGreen3'],
-    \ [' 93', 'DarkOrchid3'],
-    \ ['100', 'firebrick3'],
-    \
-    \ [' 33', 'RoyalBlue3'],
-    \ [' 34', 'SeaGreen3'],
-    \ [' 99', 'DarkOrchid3'],
-    \ ['142', 'firebrick3'],
-    \
-    \ [' 39', 'RoyalBlue3'],
-    \ [' 40', 'SeaGreen3'],
-    \ ['129', 'DarkOrchid3'],
-    \ ['178', 'firebrick3'],
-    \
-    \ [' 45', 'RoyalBlue3'],
-    \ [' 48', 'SeaGreen3'],
-    \ ['207', 'DarkOrchid3'],
-    \ ['220', 'firebrick3']
-    \ ]
+
+" Matchup
+nnoremap <c-k> :<c-u>MatchupWhereAmI??<cr>
 
 
 " Tex
