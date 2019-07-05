@@ -166,6 +166,7 @@ Plugin 'klen/python-mode'
 "Plugin 'jceb/vim-editqf'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'haya14busa/vim-easyoperator-phrase'
+" Jump to any location specified by two characters.
 Plugin 'justinmk/vim-sneak'
 Plugin 'bogado/file-line'
 "Plugin 'JazzCore/ctrlp-cmatcher'
