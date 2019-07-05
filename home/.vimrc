@@ -303,7 +303,7 @@ let g:Tex_ViewRule_pdf = 'open -a Preview'
 
 
 " BufExplorer
-noremap <Leader>v :BufExplorer<CR>
+noremap <Leader>B :BufExplorer<CR>
 let g:bufExplorerFindActive=0
 let g:bufExplorerDisableDefaultKeyMapping=1
 " nunmap somehow is not working
