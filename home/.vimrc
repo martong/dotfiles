@@ -51,6 +51,11 @@ set history=500
 " Mute bell
 "set vb t_vb=
 highlight Cursor guifg=black guibg=white
+" highlight the current line in every window and update the highlight as the
+" cursor moves
+set cursorline
+" highlight the current column
+set cursorcolumn
 
 set autoread
 set mouse=a
