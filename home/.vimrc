@@ -160,7 +160,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 "Plugin 'eapache/rainbow_parentheses.vim'
 Plugin 'luochen1990/rainbow'
-Plugin 'gibiansky/vim-latex-objects'
+"Plugin 'gibiansky/vim-latex-objects'
 Plugin 'danro/rename.vim'
 Plugin 'klen/python-mode'
 "Plugin 'jceb/vim-editqf'
@@ -276,6 +276,11 @@ let g:rainbow_active = 1
 
 " Matchup
 nnoremap <c-k> :<c-u>MatchupWhereAmI??<cr>
+hi MatchParen ctermbg=blue guibg=lightblue cterm=italic gui=italic
+augroup matchup_matchparen_highlight
+  autocmd!
+  autocmd ColorScheme * hi MatchParen ctermbg=blue guibg=lightblue cterm=italic gui=italic
+augroup END
 
 
 " Tex
@@ -555,6 +560,11 @@ let g:clighter_libclang_file = '/Users/mg/local/clang_src/llvm_built/lib/libclan
 "let g:clighter_occurrences_mode = 1
 "let g:ClighterOccurrences = 1
 map <leader>Cl :ClighterToggleOccurences<cr>
+
+
+" vim-sneak
+" Case sensitivity is determined by 'ignorecase' and 'smartcase'
+let g:sneak#use_ic_scs = 1
 
 
 " EasyMotion
