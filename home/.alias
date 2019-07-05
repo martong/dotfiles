@@ -2,7 +2,7 @@
 # directories
 #
 hash -d w=$HOME/WORK
-hash -d df=$HOME/.homesick/repos/dotfiles
+hash -d df=$HOME/.homesick/repos/dotfiles/home
 
 #
 # VIM
