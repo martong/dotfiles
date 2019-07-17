@@ -229,6 +229,7 @@ set rtp+=~/.fzf
 Plugin 'junegunn/fzf.vim'
 " Advanced text objects for matching parens. Similar to matchit, but better.
 Plugin 'andymass/vim-matchup'
+Plugin 'machakann/vim-highlightedyank'
 
 " clang-format dependencies
 "Plugin 'kana/vim-operator-user'
