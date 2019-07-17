@@ -553,6 +553,8 @@ let g:quickSearch_FindCommand = 'LAg! '
 " Completion conflicts with ycm completion, so turn it off
 " https://stackoverflow.com/questions/21743323/youcompleteme-freezes-when-used-with-python-mode
 let g:pymode_rope_completion = 0
+" Rope generation is very slow
+let g:pymode_rope_regenerate_on_write = 0
 
 
 " Clighter
