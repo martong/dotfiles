@@ -443,7 +443,7 @@ let g:ConqueGdb_Leader = '<Leader>g'
 
 
 " a.vim
-let g:alternateSearchPath="reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
+let g:alternateSearchPath="reg:|lib|include/clang||,reg:|include/clang|lib||,reg:/include/src//,reg:/include/source//,reg:/inc/src//,reg:/inc/source//,reg:/src/include//,reg:/source/include//,reg:/src/inc//,reg:/source/include//,sfr:..,sfr:../..,sfr:../../.."
 let g:alternateNoDefaultAlternate = 1
 let g:alternateRelativeFiles = 1
 " For some reason :A does not update the buffer list, if the alternate file
