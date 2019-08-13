@@ -527,8 +527,7 @@ let g:ctrlp_mruf_relative = 1
 nnoremap <Leader>t :CommandT<cr>
 "nnoremap <Leader>o :CtrlPCurWD<cr>
 nnoremap <Leader>o :Files<cr>
-noremap <leader>v :CtrlPMRUFiles<CR>
-noremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>b :Buffers<CR>
 function! SubstituteTest(str)
   let str2 = a:str
   " substitute depends on ignorecase
