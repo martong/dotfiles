@@ -279,6 +279,7 @@ autocmd CursorHoldI * silent! checktime
 
 " Rainbow parenthesis
 let g:rainbow_active = 1
+nnoremap coR :RainbowToggle<CR>
 
 
 " Matchup
