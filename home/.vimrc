@@ -70,6 +70,8 @@ set cpoptions+=n
 
 set nofoldenable
 
+" Do Insert two spaces after a '.', '?' and '!' with a join and gq command.
+set nojoinspaces
 
 "show tab number in tabline
 "http://vim.wikia.com/wiki/Show_tab_number_in_your_tab_line
