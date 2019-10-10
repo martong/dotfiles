@@ -433,6 +433,7 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>', '<Enter>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:ycm_key_list_stop_completion=['<C-e>']
 let g:ycm_auto_trigger = 0
 let g:ycm_max_diagnostics_to_display = 1000
 "let g:ycm_filetype_specific_completion_to_disable = {
