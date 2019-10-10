@@ -15,3 +15,41 @@ snippet co
 ${VISUAL}${0}
 \end{code}
 endsnippet
+
+snippet fr
+\begin{frame}
+\frametitle{${VISUAL}${0}}
+\end{frame}
+endsnippet
+
+snippet mi
+\begin{minted}{c++}
+${VISUAL}${0}
+\end{minted}
+endsnippet
+
+snippet frmi
+\begin{frame}[fragile]
+\frametitle{${VISUAL}${0}}
+\begin{minted}{c++}
+\end{minted}
+\end{frame}
+endsnippet
+
+snippet it
+\begin{itemize}
+\item ${VISUAL}${0}
+\end{itemize}
+endsnippet
+
+snippet col
+\begin{columns}[t]
+\begin{column}{0.5\textwidth}
+${VISUAL}${0}
+\end{column}
+\vrule{}
+\hspace{10pt}
+\begin{column}{0.5\textwidth}
+\end{column}
+\end{columns}
+endsnippet
