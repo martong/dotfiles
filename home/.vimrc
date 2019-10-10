@@ -715,3 +715,4 @@ nnoremap <leader>B :wa<CR>:make!<CR>
 " copy to clipboard.
 " https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim
 command! -range Copy :<line1>,<line2>write !xclip -i -sel c
+vnoremap <leader>co :Copy<cr>
