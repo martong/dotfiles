@@ -184,3 +184,5 @@ source ~/.common_zsh_bash.rc
 test -s ~/.alias && . ~/.alias || true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf_git_files.zsh ] && source ~/.fzf_git_files.zsh
+[ -f ~/.fzf_tmux_hist.zsh ] && source ~/.fzf_tmux_hist.zsh
