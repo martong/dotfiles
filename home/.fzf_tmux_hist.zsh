@@ -1,5 +1,5 @@
 __fseltmuxhist() {
-  local cmd='tmux capture-pane -pt "$target-pane" | tr " " "\n"'
+  local cmd='tmux capture-pane -pt "$target-pane" | tr "[:space:]" "\n"'
   setopt localoptions pipefail 2> /dev/null
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) --tac -m "$@" | while read item; do
     echo -n "${(q)item} "
