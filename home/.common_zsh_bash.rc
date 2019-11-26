@@ -1,5 +1,6 @@
 #export PATH=/usr/local/bin:$PATH
 export PATH=/home/egbomrt/local/rtags/build/bin:$PATH
+#export PATH=/home/egbomrt/WORK/llvm0/build/release_assert/bin:$PATH
 export PATH=/home/egbomrt/local/tmux:$PATH
 export PATH=/usr/lib/ccache:$PATH
 export CCACHE_CPP2=yes
