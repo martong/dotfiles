@@ -4,7 +4,7 @@ __allpanes() {
   local filter_cmd="$1"
   for w in $(tmux list-windows -F '#{window_index}') ;do
     for p in $(tmux list-panes -t "$w" -F '#{pane_index}') ;do
-      tmux capture-pane -pt "$w.$p" | eval ${filter_cmd}
+      tmux capture-pane -pt "$w.$p" -S -200 -J | eval ${filter_cmd}
     done
   done
 }
