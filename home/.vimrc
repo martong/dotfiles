@@ -345,7 +345,7 @@ nnoremap coR :RainbowToggle<CR>
 
 
 " Matchup
-nnoremap <c-k> :<c-u>MatchupWhereAmI??<cr>
+nnoremap <leader>w :<c-u>MatchupWhereAmI??<cr>
 hi MatchParen ctermbg=blue guibg=lightblue cterm=italic gui=italic
 augroup matchup_matchparen_highlight
   autocmd!
@@ -605,7 +605,7 @@ function! SubstituteTestInName()
 endfunction
 "map <leader>w :let @9 = expand("%:t:r")<cr>:CtrlP `pwd`<cr><C-\>r9
 " TODO save @9 before and load after
-map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
+"map <leader>w :let @9 = SubstituteTestInName()<cr>:CtrlP `pwd`<cr><C-\>r9
 
 
 " Ag/Ack
