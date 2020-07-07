@@ -57,6 +57,11 @@ set cursorline
 " highlight the current column
 set cursorcolumn
 
+" Change cursor shape in different modes
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 set autoread
 set mouse=a
 " Indent linebreaks
