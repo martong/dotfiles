@@ -434,13 +434,20 @@ endfunction
 "let g:ycm_server_log_level = 'debug'
 let g:ycm_global_ycm_extra_conf = '/home/egbomrt/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_complete_in_comments = 1
 let g:ycm_key_invoke_completion = '<C-Space>'
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_key_list_select_completion=['<C-n>', '<Down>', '<Enter>']
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:ycm_key_list_stop_completion=['<C-e>']
-let g:ycm_auto_trigger = 0
+let g:ycm_auto_trigger = 1
 let g:ycm_max_diagnostics_to_display = 1000
+" Let clangd fully control code completion
+"let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+"let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release_assert/bin/clangd'
+let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release/bin/clangd'
+let g:ycm_clangd_args = ['--log=verbose', '--pretty', '--background-index', '--header-insertion=never']
 "let g:ycm_filetype_specific_completion_to_disable = {
       "\ 'python': 1
       "\}
@@ -656,6 +663,29 @@ let g:EasyMotion_smartcase = 1
 "map <Leader>j <Plug>(easymotion-j)
 "map <Leader>k <Plug>(easymotion-k)
 nmap <Leader>/ <Plug>(easymotion-sn)
+
+
+" vim-lsp
+"let g:lsp_log_verbose = 1
+"let g:lsp_log_file = expand('~/.vim-lsp.log')
+"let g:lsp_diagnostics_enabled = 0
+"let g:lsp_signs_enabled = 0
+"if executable('clangd')
+    "au User lsp_setup call lsp#register_server({
+        "\ 'name': 'clangd',
+        "\ 'cmd': {server_info->['clangd', '--log=verbose']},
+        "\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        "\ })
+"endif
+"if executable('ccls')
+   "au User lsp_setup call lsp#register_server({
+      "\ 'name': 'ccls',
+      "\ 'cmd': {server_info->['ccls', '--log-file=/tmp/ccls.log']},
+      "\ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      "\ 'initialization_options': {},
+      "\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+      "\ })
+"endif
 
 
 " Jump to the next or previous line that has the same level or a lower
