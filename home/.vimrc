@@ -460,6 +460,7 @@ map <Leader>yy :YcmForceCompileAndDiagnostics<cr>
 map <Leader>ys :YcmShowDetailedDiagnostic<cr>
 map <Leader>yf :YcmCompleter FixIt<cr>
 map <Leader>yt :YcmCompleter GetType<cr>
+map <Leader>yr :YcmCompleter GoToReferences<cr>
 
 
 " UltiSnips config
