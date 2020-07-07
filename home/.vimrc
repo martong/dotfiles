@@ -721,6 +721,7 @@ autocmd FileType python vnoremap <buffer> <silent> ]} <Esc>:call NextIndent(0, 1
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 map <Leader>3 :vertical resize 30<cr>
+map <Leader>5 :vertical resize 50<cr>
 map <Leader>8 :vertical resize 89<cr>
 " Select pasted text
 nnoremap gV `[v`]
