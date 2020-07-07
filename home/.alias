@@ -33,6 +33,8 @@ unalias gss 2>/dev/null
 alias gss='git status -s'
 unalias gitlog 2>/dev/null
 alias gitlog='git log --color --oneline --graph --decorate '
+unalias glh 2>/dev/null
+alias glh="gl HEAD~10..HEAD"
 unalias gitwhat 2>/dev/null
 alias gitwhat='git whatchanged --color --graph --decorate '
 unalias gcm 2>/dev/null
