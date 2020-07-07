@@ -268,6 +268,10 @@ autocmd CursorHoldI * silent! checktime
 "autocmd WinEnter * call SetColorColumn()
 "autocmd WinLeave * call SetColorColumn()
 
+" Add a global mark when leaving insert mode, so I can get back to the last
+" edit location accross all buffers.
+autocmd InsertLeave * execute 'normal! mI'
+
 
 "\	'ctermfgs': ['27', '28', '93', '100'],
 "\	'ctermfgs': ['blue', 'yellow', 'cyan', 'magenta'],
