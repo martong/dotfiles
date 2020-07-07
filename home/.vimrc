@@ -219,6 +219,9 @@ Plugin 'junegunn/fzf.vim'
 " Advanced text objects for matching parens. Similar to matchit, but better.
 Plugin 'andymass/vim-matchup'
 Plugin 'machakann/vim-highlightedyank'
+" vim-lsp
+"Plugin 'prabirshrestha/async.vim'
+"Plugin 'prabirshrestha/vim-lsp'
 
 " clang-format dependencies
 "Plugin 'kana/vim-operator-user'
