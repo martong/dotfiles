@@ -20,6 +20,8 @@ hash -d df=$HOME/.homesick/repos/dotfiles/home
 #alias view='$VIMDIR/vim -R'
 #alias vimide='VIMIDE=ide $VIMDIR/vim -v'
 #alias vim_pure='$VIMDIR/vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
+alias vimnoycm='VIMIDE=noycm vim -v'
+alias vimgdiff='VIMIDE=noycm vim -v -c Gdiff'
 alias vimide='VIMIDE=ide vim -v'
 alias gvimide='VIMIDE=ide vim -g'
 alias vim_pure='vim -v -u ~/.vimrc_empty --cmd "set runtimepath=~/.vim_empty"'
