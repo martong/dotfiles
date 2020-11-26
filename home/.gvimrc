@@ -8,6 +8,10 @@ nnoremap <M-l> gt
 " Maximize window when start
 "set lines=499 columns=499
 
+" Disable bell.
+" Set the bell to be visual then set it to empty.
+set vb t_vb=
+
 " Disable vertical scrollbars
 set guioptions-=L
 set guioptions-=l
