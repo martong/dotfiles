@@ -430,13 +430,15 @@ let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 let g:ycm_key_list_stop_completion=['<C-e>']
 let g:ycm_auto_trigger = 1
-let g:ycm_max_diagnostics_to_display = 1000
+let g:ycm_max_diagnostics_to_display = 20
 " Let clangd fully control code completion
 "let g:ycm_clangd_uses_ycmd_caching = 0
 " Use installed clangd, not YCM-bundled clangd which doesn't get updates.
 "let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release_assert/bin/clangd'
 let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release/bin/clangd'
 let g:ycm_clangd_args = ['--log=verbose', '--pretty', '--background-index', '--header-insertion=never']
+" Disable popup (hover) on cursor hold
+let g:ycm_auto_hover = ''
 "let g:ycm_filetype_specific_completion_to_disable = {
       "\ 'python': 1
       "\}
@@ -743,3 +745,4 @@ nnoremap <leader>B :wa<CR>:make!<CR>
 " https://stackoverflow.com/questions/3961859/how-to-copy-to-clipboard-in-vim
 command! -range Copy :<line1>,<line2>write !xclip -i -sel c
 vnoremap <leader>co :Copy<cr>
+
