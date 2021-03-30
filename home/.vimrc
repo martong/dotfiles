@@ -122,18 +122,19 @@ let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized
 
-
+if &diff
+  let g:loaded_youcompleteme = 1
+endif
 if $VIMIDE != "ide"
   let g:loaded_youcompleteme = 1
-else
-  "echo "VIMIDE"
-  set wildignore+=*.o
-  set wildignore+=*build*
-  "set wildignore+=*test*
+"else
+  ""echo "VIMIDE"
+  "set wildignore+=*.o
+  "set wildignore+=*build*
+  ""set wildignore+=*test*
 
-  let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
-  let &titlestring=DIRNAME
-
+  "let DIRNAME=fnamemodify(fnamemodify(".", ":p:h"), ":t")
+  "let &titlestring=DIRNAME
 endif
 
 
