@@ -156,7 +156,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'luochen1990/rainbow'
 "Plugin 'gibiansky/vim-latex-objects'
 Plugin 'danro/rename.vim'
-Plugin 'klen/python-mode'
+" Python syntax checker
+Plugin 'dense-analysis/ale'
 "Plugin 'jceb/vim-editqf'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'haya14busa/vim-easyoperator-phrase'
@@ -442,6 +443,7 @@ let g:ycm_auto_hover = ''
 "let g:ycm_filetype_specific_completion_to_disable = {
       "\ 'python': 1
       "\}
+"let g:ycm_python_binary_path = '/usr/bin/python3'
 "let g:ycm_semantic_triggers =  {
 "  \   'c' : ['->', '.'],
 "  \   'objc' : ['->', '.'],
@@ -550,8 +552,6 @@ endfunction
 nnoremap <Leader>cf :call GitClangFormat()<CR>
 map <Leader>Cf :0,$py3file /home/egbomrt/bin/clang-format.py<CR>
 vmap <Leader>cf :py3file /home/egbomrt/bin/clang-format.py<CR>
-"Python
-autocmd FileType python map <buffer> <Leader>cf :PymodeLintAuto<CR>
 
 
 " rtags
@@ -610,14 +610,6 @@ endfunction
 " Ag/Ack
 " with visual star ag
 let g:quickSearch_FindCommand = 'LAg! '
-
-
-" Pymode
-" Completion conflicts with ycm completion, so turn it off
-" https://stackoverflow.com/questions/21743323/youcompleteme-freezes-when-used-with-python-mode
-let g:pymode_rope_completion = 0
-" Rope generation is very slow
-let g:pymode_rope_regenerate_on_write = 0
 
 
 " Clighter
