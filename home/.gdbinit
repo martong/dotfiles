@@ -11,3 +11,4 @@ set history filename ~/.gdb_history
 set unwindonsignal on
 
 source ~/WORK/llvm0/git/llvm-project/llvm/utils/gdb-scripts/prettyprinters.py
+skip function llvm::Optional<clang::Stmt const*>::operator*() &
