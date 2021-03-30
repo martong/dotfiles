@@ -66,6 +66,8 @@ function get_total_distcc_jobs() {
     echo ${TOTAL_JOBS}
 }
 function run_distcc() {
+  DISTCC_HOSTS=$(assemble_distcc_hosts)
+  echo ${DISTCC_HOSTS}
   DISTCC_HOSTS=$(assemble_distcc_hosts) \
     CCACHE_PREFIX="distcc" \
     "$@"
