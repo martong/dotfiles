@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "configurePresets": [
+    {
+      "name": "debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../../../build/debug",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": "ON",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "/usr/lib/ccache/c++",
+        "CMAKE_C_COMPILER": "/usr/lib/ccache/cc",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "LLVM_USE_LINKER": "lld",
+        "LLVM_APPEND_VC_REV": "OFF",
+        "LLVM_ENABLE_ASSERTIONS": "ON",
+        "LLVM_ENABLE_BINDINGS": "OFF",
+        "LLVM_ENABLE_DUMP": "ON",
+        "LLVM_ENABLE_PROJECTS": "clang;clang-tools-extra",
+        "LLVM_ENABLE_Z3_SOLVER": "ON",
+        "LLVM_LIT_ARGS": "-sv --show-unsupported --show-xfail",
+        "LLVM_TARGETS_TO_BUILD": "X86",
+        "LLVM_USE_SPLIT_DWARF": "OFF",
+        "LLVM_Z3_INSTALL_DIR": "/home/egbomrt/local/z3/install"
+      }
+    },
+    {
+      "name": "release_assert",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../../../build/release_assert",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": "ON",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_COMPILER": "/usr/lib/ccache/c++",
+        "CMAKE_C_COMPILER": "/usr/lib/ccache/cc",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "LLVM_USE_LINKER": "lld",
+        "LLVM_APPEND_VC_REV": "OFF",
+        "LLVM_ENABLE_ASSERTIONS": "ON",
+        "LLVM_ENABLE_BINDINGS": "OFF",
+        "LLVM_ENABLE_DUMP": "ON",
+        "LLVM_ENABLE_PROJECTS": "clang",
+        "LLVM_ENABLE_Z3_SOLVER": "ON",
+        "LLVM_LIT_ARGS": "-sv --show-unsupported --show-xfail",
+        "LLVM_TARGETS_TO_BUILD": "X86",
+        "LLVM_USE_SPLIT_DWARF": "OFF",
+        "LLVM_Z3_INSTALL_DIR": "/home/egbomrt/local/z3/install"
+      }
+    },
+    {
+      "name": "coverage",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../../../build/covdebug",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": "ON",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "/usr/lib/ccache/c++",
+        "CMAKE_C_COMPILER":   "/usr/lib/ccache/cc",
+        "CMAKE_CXX_FLAGS": "-fprofile-arcs -ftest-coverage",
+        "CMAKE_C_FLAGS":   "-fprofile-arcs -ftest-coverage",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "LLVM_USE_LINKER": "lld",
+        "LLVM_APPEND_VC_REV": "OFF",
+        "LLVM_ENABLE_ASSERTIONS": "ON",
+        "LLVM_ENABLE_BINDINGS": "OFF",
+        "LLVM_ENABLE_DUMP": "ON",
+        "LLVM_ENABLE_PROJECTS": "clang;clang-tools-extra",
+        "LLVM_ENABLE_Z3_SOLVER": "ON",
+        "LLVM_LIT_ARGS": "-sv --show-unsupported --show-xfail",
+        "LLVM_TARGETS_TO_BUILD": "X86",
+        "LLVM_USE_SPLIT_DWARF": "OFF",
+        "LLVM_Z3_INSTALL_DIR": "/home/egbomrt/local/z3/install"
+      }
+    },
+    {
+      "name": "release_tools",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../../../build/release",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": "ON",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "/usr/lib/ccache/c++",
+        "CMAKE_C_COMPILER": "/usr/lib/ccache/cc",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "LLVM_USE_LINKER": "gold",
+        "LLVM_ENABLE_PROJECTS": "clang;clang-tools-extra;lld",
+        "LLVM_TARGETS_TO_BUILD": "X86"
+      }
+    }
+  ]
+}
