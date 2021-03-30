@@ -73,3 +73,5 @@ alias f='ag -ig '
 
 alias t=true
 
+alias gerrit='ssh -p 29418 egbomrt@gerrit.ericsson.se gerrit '
+
