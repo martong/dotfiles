@@ -220,7 +220,6 @@ set rtp+=~/.fzf
 Plugin 'junegunn/fzf.vim'
 " Advanced text objects for matching parens. Similar to matchit, but better.
 Plugin 'andymass/vim-matchup'
-Plugin 'machakann/vim-highlightedyank'
 " vim-lsp
 "Plugin 'prabirshrestha/async.vim'
 "Plugin 'prabirshrestha/vim-lsp'
@@ -496,7 +495,7 @@ let g:UltiSnipsListSnippets="<c-l>"
 " this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 " ConqueGdb
@@ -648,6 +647,18 @@ let g:EasyMotion_smartcase = 1
 "map <Leader>j <Plug>(easymotion-j)
 "map <Leader>k <Plug>(easymotion-k)
 nmap <Leader>/ <Plug>(easymotion-sn)
+
+
+" ALE
+nnoremap <Leader>l :ALEToggle<CR>
+" Disable for C/C++ in favor of Clangd
+let g:ale_pattern_options = {
+\   '.*\.cpp$': {'ale_enabled': 0},
+\   '.*\.cxx$': {'ale_enabled': 0},
+\   '.*\.c$': {'ale_enabled': 0},
+\   '.*\.hpp$': {'ale_enabled': 0},
+\   '.*\.h$': {'ale_enabled': 0},
+\}
 
 
 " vim-lsp
