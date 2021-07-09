@@ -48,6 +48,14 @@
       }
     },
     {
+      "name": "release_assert_expch",
+      "inherits": "release_assert",
+      "binaryDir": "${sourceDir}/../../../build/release_assert_expch",
+      "cacheVariables": {
+        "LLVM_ENABLE_EXPENSIVE_CHECKS": "ON"
+      }
+    },
+    {
       "name": "coverage",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/../../../build/covdebug",
