@@ -25,6 +25,17 @@
       }
     },
     {
+      "name": "debug_san",
+      "inherits": "debug",
+      "binaryDir": "${sourceDir}/../../../build/debug_san",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/usr/bin/clang++-11",
+        "CMAKE_C_COMPILER": "/usr/bin/clang-11",
+        "LLVM_ENABLE_ASSERTIONS": "ON",
+        "LLVM_USE_SANITIZER": "Address;Undefined"
+      }
+    },
+    {
       "name": "release_assert",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/../../../build/release_assert",
