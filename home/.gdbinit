@@ -20,3 +20,10 @@ skip function llvm::Optional<clang::ento::DefinedOrUnknownSVal>::operator*() &
 skip function std::unique_ptr<clang::ento::ConstraintManager, std::default_delete<clang::ento::ConstraintManager> >::operator->() const
 skip function clang::ento::SVal::castAs<clang::ento::DefinedSVal>() const
 skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::IntrusiveRefCntPtr(clang::ento::ProgramState const*)
+skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::operator->() const
+skip function clang::ento::ProgramState::getStateManager() const
+skip function clang::ento::SimpleConstraintManager::getSValBuilder() const
+skip function clang::ento::SimpleConstraintManager::getBasicVals() const
+skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::operator=(llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>)
+skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::~IntrusiveRefCntPtr()
+skip function llvm::ImmutableSet<clang::ento::SymExpr const*, llvm::ImutContainerInfo<clang::ento::SymExpr const*> >::ImmutableSet(llvm::ImmutableSet<clang::ento::SymExpr const*, llvm::ImutContainerInfo<clang::ento::SymExpr const*> > const&)
