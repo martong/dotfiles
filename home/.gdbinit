@@ -27,3 +27,5 @@ skip function clang::ento::SimpleConstraintManager::getBasicVals() const
 skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::operator=(llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>)
 skip function llvm::IntrusiveRefCntPtr<clang::ento::ProgramState const>::~IntrusiveRefCntPtr()
 skip function llvm::ImmutableSet<clang::ento::SymExpr const*, llvm::ImutContainerInfo<clang::ento::SymExpr const*> >::ImmutableSet(llvm::ImmutableSet<clang::ento::SymExpr const*, llvm::ImutContainerInfo<clang::ento::SymExpr const*> > const&)
+skip function clang::ento::BinarySymExprImpl<clang::ento::SymExpr const*, llvm::APSInt const&, (clang::ento::SymExpr::Kind)1>::getLHS() const
+skip function clang::ento::BinarySymExprImpl<clang::ento::SymExpr const*, llvm::APSInt const&, (clang::ento::SymExpr::Kind)1>::getRHS() const
