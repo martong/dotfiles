@@ -36,26 +36,34 @@
       }
     },
     {
-      "name": "release_assert",
+      "name": "release",
       "generator": "Ninja",
-      "binaryDir": "${sourceDir}/../../../build/release_assert",
+      "binaryDir": "${sourceDir}/../../../build/release",
       "cacheVariables": {
         "BUILD_SHARED_LIBS": "ON",
-        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_CXX_COMPILER": "/usr/lib/ccache/c++",
         "CMAKE_C_COMPILER": "/usr/lib/ccache/cc",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "LLVM_USE_LINKER": "lld",
         "LLVM_APPEND_VC_REV": "OFF",
-        "LLVM_ENABLE_ASSERTIONS": "ON",
         "LLVM_ENABLE_BINDINGS": "OFF",
-        "LLVM_ENABLE_DUMP": "ON",
         "LLVM_ENABLE_PROJECTS": "clang",
         "LLVM_ENABLE_Z3_SOLVER": "ON",
-        "LLVM_LIT_ARGS": "-sv --show-unsupported --show-xfail",
         "LLVM_TARGETS_TO_BUILD": "X86",
         "LLVM_USE_SPLIT_DWARF": "OFF",
-        "LLVM_Z3_INSTALL_DIR": "/home/egbomrt/local/z3/install"
+        "LLVM_Z3_INSTALL_DIR": "/local/local/z3/install"
+      }
+    },
+    {
+      "name": "release_assert",
+      "inherits": "release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/../../../build/release_assert",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "LLVM_ENABLE_ASSERTIONS": "ON",
+        "LLVM_ENABLE_DUMP": "ON"
       }
     },
     {
