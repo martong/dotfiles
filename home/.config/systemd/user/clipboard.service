@@ -1,0 +1,20 @@
+[Unit]
+Description=Clipboard Service
+After=network.target clipboard.socket
+Requires=clipboard.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/bin/clipboard_server.py
+TimeoutStopSec=5
+
+[Install]
+WantedBy=default.target
+
+# To start the service:
+# systemctl --user daemon-reload
+# systemctl --user restart clipboard.service
+#
+# To view the logs, use:
+# journalctl -f --user
+# journalctl -f --user-unit clipboard.service
