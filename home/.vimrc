@@ -1,4 +1,5 @@
 " Generic Editor Configs
+set encoding=utf-8
 set number
 " Highlight search results (turn off :nohlsearch)
 "set hlsearch
