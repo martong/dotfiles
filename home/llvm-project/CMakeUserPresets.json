@@ -21,7 +21,7 @@
         "LLVM_LIT_ARGS": "-sv --show-unsupported --show-xfail",
         "LLVM_TARGETS_TO_BUILD": "X86",
         "LLVM_USE_SPLIT_DWARF": "OFF",
-        "LLVM_Z3_INSTALL_DIR": "/home/egbomrt/local/z3/install"
+        "LLVM_Z3_INSTALL_DIR": "/local/local/z3/install"
       }
     },
     {

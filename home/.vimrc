@@ -436,8 +436,8 @@ let g:ycm_max_diagnostics_to_display = 20
 "let g:ycm_clangd_uses_ycmd_caching = 0
 " Use installed clangd, not YCM-bundled clangd which doesn't get updates.
 "let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release_assert/bin/clangd'
-let g:ycm_clangd_binary_path = '/home/egbomrt/WORK/llvm0/build/release/bin/clangd'
-let g:ycm_clangd_args = ['--log=verbose', '--pretty', '--background-index', '--header-insertion=never']
+let g:ycm_clangd_binary_path = '/local/WORK/llvm0/build/release/bin/clangd'
+let g:ycm_clangd_args = ['--log=verbose', '--pretty', '--background-index', '--header-insertion=never', '--pch-storage=memory', '-j=8']
 " Disable popup (hover) on cursor hold
 let g:ycm_auto_hover = ''
 "let g:ycm_filetype_specific_completion_to_disable = {

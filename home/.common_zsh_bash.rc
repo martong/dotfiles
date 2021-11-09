@@ -1,13 +1,10 @@
-#export PATH=/usr/local/bin:$PATH
-export PATH=/home/egbomrt/local/rtags/build/bin:$PATH
-#export PATH=/home/egbomrt/WORK/llvm0/build/release_assert/bin:$PATH
-export PATH=/home/egbomrt/local/tmux:$PATH
+export PATH=/local/local/tmux:$PATH
 export PATH=/usr/lib/ccache:$PATH
 export CCACHE_CPP2=yes
 export PATH=$PATH:/home/egbomrt/bin
-#export PYTHONPATH=$PYTHONPATH:/Users/mg/ycm_extra_conf.jsondb/
-#export PYTHONPATH=$PYTHONPATH:~/local/clang_src/llvm/tools/clang/bindings/python
 export PATH=$PATH:~/local/arcanist/arcanist/bin
+
+export LD_LIBRARY_PATH=/local/local/z3/install/lib
 
 export EDITOR=vim
 export WINEDITOR=gvim

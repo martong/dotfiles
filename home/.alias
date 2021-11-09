@@ -1,8 +1,7 @@
 #
 # directories
 #
-hash -d w=$HOME/WORK
-hash -d p=$HOME/WORK/PAPERS
+hash -d w=/local/WORK
 hash -d df=$HOME/.homesick/repos/dotfiles/home
 
 #
